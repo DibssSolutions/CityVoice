@@ -1,0 +1,72 @@
+.event
+	&__inner
+		max-width: 1160px
+		padding: 0  30px
+		margin: 0 auto
+		+sm
+			padding: 0 15px 
+	&__content
+		background-color: $lightGray
+		padding-bottom: 40px
+		+sm
+			padding-bottom: 0
+	&__list
+		margin-top: -30px
+		+sm
+			margin-top: 15px
+	&__row
+		margin-bottom: 30px
+		display: flex
+		flex-wrap: wrap
+		position: relative
+		z-index: 10
+		justify-content: space-between
+		+md
+			margin-bottom: 0
+	&__row
+		&:last-child
+			margin-bottom: 40px
+			+sm
+				display: none
+	&__item
+		max-width: 23.7%
+		display: flex
+		justify-content: space-between
+		flex-direction: column
+		flex: 1 1 23.7%
+		background-color: $white
+		+md
+			max-width: 48%
+			flex: 1 1 48%
+			margin-bottom: 40px
+		+sm
+			margin-bottom: 20px
+		// +r(767)
+		// 	justify-content: center
+		// 	max-width: 100%
+		// 	flex: 1 1 100% 
+	&__img
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: 50% 50%
+		padding-bottom: 88.3%
+	&__info
+		padding: 0 20px
+		background-color: $white
+		+sm
+			padding: 0 10px 
+	&__title-sm
+		padding: 30px 0 60px
+		+sm
+			padding: 10px 0 11px  
+	&__date
+		color: $gray
+		padding-bottom: 30px 
+		font-size: 20px
+		+sm
+			font-size: 10px
+			padding-bottom: 10px
+	&__btn
+		text-align: center
+		+sm
+			display: none 

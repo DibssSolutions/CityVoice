@@ -1,0 +1,15 @@
+ProjectTitle: city-voice
+
+PageList:
+- file: press.html
+  ready: 50
+- file: menu.html
+  ready: 50
+- file: banquets.html
+  ready: 50
+- file: error.html
+  ready: 50
+- file: event.html
+  ready: 50
+- file: restaurant.html
+  ready: 50

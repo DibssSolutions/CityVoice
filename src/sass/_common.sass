@@ -1,0 +1,94 @@
+body
+	font-family: $Futura
+	font-weight: 500 
+
+.inner
+	max-width: 1060px
+	padding:  0 30px
+	margin: 0 auto
+	+sm
+		padding: 0 15px 
+.in
+	max-width: 1260px
+	padding: 0 30px
+	margin: 0 auto 
+	+sm
+		padding: 0 15px 
+
+.title-lg
+	font-size: 50px
+	font-weight: 500
+	color: $white
+	text-transform: uppercase
+	+sm
+		font-size: 25px
+
+.subtitle-md
+	display: inline-block
+	color: #191926
+	font-family: $Futura
+	font-weight: 500
+	font-size: 30px
+	text-transform: uppercase
+	position: relative
+	+sm
+		font-size: 15px
+	&:before
+		content: ''
+		position: absolute
+		top: 50%
+		right: -100px 
+		transform: translateY(-50%)
+		height: 2px
+		width: 80px
+		background-color: #d4d4d4
+		+sm
+			width: 40px
+			right: -60px
+	&:after
+		content: ''
+		position: absolute
+		top: 50%
+		left: -100px
+		transform: translateY(-50%)
+		height: 2px
+		width: 80px
+		background-color: #d4d4d4
+		+sm
+			width: 40px
+			left: -60px
+
+.title-sm
+	color: $black
+	font-size: 24px
+	font-weight: 500
+	+sm
+		font-size: 12px
+	&_white
+		color: $white
+		text-transform: uppercase
+
+.btn
+	display: inline-block
+	background-color: $blue
+	max-width: 227px
+	width: 100%
+	height: 50px
+	line-height: 50px
+	font-size: 14px
+	text-decoration: none
+	color: $white
+	border-radius: 5px
+	&_green
+		background-color: $green
+
+.top-block
+	background-position: 50% 50%
+	background-size: cover
+	background-repeat: no-repeat
+	position: relative
+	&__title-lg
+		text-align: center
+		padding: 128px 0
+		+sm
+			padding: 64px 0
