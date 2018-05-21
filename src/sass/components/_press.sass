@@ -1,9 +1,9 @@
 .press
-	&__content
+	background-color:  $lightGray
+	&__inner
 		padding: 60px 0 80px
-		background-color:  $lightGray
 		+sm
-			padding: 30px 0 40px 
+			padding: 15px 
 	&__row
 		background-color: $white
 		padding-bottom: 50px
@@ -11,6 +11,8 @@
 			padding-bottom: 25px
 	&__row:not(:last-child)
 		margin-bottom: 40px
+		+sm
+			margin-bottom: 15px
 	&__info
 		text-align: center
 		max-width: 725px
@@ -21,14 +23,14 @@
 		background-position: 50% 50%
 		background-size: cover
 		background-repeat: no-repeat
-		margin-bottom: 40px
+		margin-bottom: 20px
 		+sm
-			margin-bottom: 20px
+			margin-bottom: 10px
 			padding-bottom: 50%
 	&__title-sm
-		margin-bottom: 40px
+		margin-bottom: 13px
 		+sm
-			margin-bottom: 20px
+			margin-bottom: 10px
 	&__descr
 		font-size: 16px
 		color: $gray
@@ -38,3 +40,7 @@
 		+sm
 			font-size: 14px
 			margin-bottom: 20px
+	&__btn
+		margin-top: 40px
+		+sm
+			margin-top: 20px

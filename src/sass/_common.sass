@@ -1,6 +1,12 @@
 body
 	font-family: $Futura
-	font-weight: 500 
+	font-weight: 500
+	font-size: 16px
+	color: $gray
+	line-height: 1.88
+	+sm
+		font-size: 13px
+		line-height: 1.54
 
 .inner
 	max-width: 1060px
@@ -20,17 +26,20 @@ body
 	font-weight: 500
 	color: $white
 	text-transform: uppercase
+	font-family: $Futuras
+	line-height: 1.2 
 	+sm
 		font-size: 25px
 
 .subtitle-md
 	display: inline-block
 	color: #191926
-	font-family: $Futura
+	font-family: $Futuras
 	font-weight: 500
 	font-size: 30px
 	text-transform: uppercase
 	position: relative
+	line-height: 1.2
 	+sm
 		font-size: 15px
 	&:before
@@ -62,8 +71,10 @@ body
 	color: $black
 	font-size: 24px
 	font-weight: 500
+	font-family: $Futuras
+	line-height: 1.5 
 	+sm
-		font-size: 12px
+		font-size: 14px
 	&_white
 		color: $white
 		text-transform: uppercase
@@ -71,14 +82,19 @@ body
 .btn
 	display: inline-block
 	background-color: $blue
-	max-width: 227px
-	width: 100%
+	padding: 0 85px 
 	height: 50px
 	line-height: 50px
 	font-size: 14px
 	text-decoration: none
 	color: $white
 	border-radius: 5px
+	font-family: $Futuras
+	+sm
+		padding: 0 40px 
+		font-size: 13px
+		height: 35px
+		line-height: 35px
 	&_green
 		background-color: $green
 
@@ -89,6 +105,17 @@ body
 	position: relative
 	&__title-lg
 		text-align: center
-		padding: 128px 0
+		padding: 103px 0
 		+sm
-			padding: 64px 0
+			padding: 51px 0
+
+.link
+	text-decoration: none
+	font-size: 20px
+	font-weight: 500
+	color: $blue
+	line-height: 1.2
+	margin-top: 20px
+	display: inline-block
+	+sm
+		display: none
