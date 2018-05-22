@@ -1,19 +1,18 @@
 .event
+	background-color: $lightGray
+	padding-bottom: 40px
+	+sm
+		padding-bottom: 0
 	&__inner
 		max-width: 1160px
 		padding: 0  30px
 		margin: 0 auto
 		+sm
-			padding: 0 15px 
-	&__content
-		background-color: $lightGray
-		padding-bottom: 40px
-		+sm
-			padding-bottom: 0
+			padding: 0 15px
 	&__list
 		margin-top: -30px
 		+sm
-			margin-top: 15px
+			margin-top: 20px
 	&__row
 		margin-bottom: 30px
 		display: flex
@@ -37,36 +36,35 @@
 		background-color: $white
 		border-radius: 5px
 		+md
-			max-width: 48%
-			flex: 1 1 48%
+			max-width: 47.4%
+			flex: 1 1 47.4%
 			margin-bottom: 40px
 		+sm
 			margin-bottom: 20px
-		// +r(767)
-		// 	justify-content: center
-		// 	max-width: 100%
-		// 	flex: 1 1 100% 
 	&__img
 		background-size: cover
 		background-repeat: no-repeat
 		background-position: 50% 50%
 		padding-bottom: 88.3%
+		border-top-left-radius: 5px
+		border-top-right-radius: 5px
+		+sm
+			padding-bottom: 84.4% 
 	&__info
 		padding: 0 20px
-		background-color: $white
 		+sm
 			padding: 0 10px 
 	&__title-sm
-		padding: 30px 0 60px
+		padding: 22px 0 45px
 		+sm
-			padding: 10px 0 11px  
+			padding: 10px 0 24px  
 	&__date
 		color: $gray
-		padding-bottom: 30px 
+		padding-bottom: 25px 
 		font-size: 20px
 		font-family: $Futuras 
 		+sm
-			font-size: 10px
+			font-size: 13px
 			padding-bottom: 10px
 	&__btn
 		text-align: center
