@@ -1,99 +1,97 @@
 .menu
-	&__content
-		padding-bottom: 60px
+	&__in
+		padding-top: 70px
 		+sm
-			padding-bottom: 27px
+			padding-top: 35px 
+	&__article
+		padding-bottom: 70px
+		+sm
+			padding-bottom: 35px
 
-.content
-	&__row
-		padding: 70px 0 0 0
-		display: flex
-		align-items: center
-		justify-content: space-between
-		+md
-			flex-direction: column
-		+r(767)
-			display: block
-			padding: 26px 0 0 0 
-		&:nth-child(even) .content__col_sm
-			order: 1
-			padding-right: 0
-			padding-left: 20px
-			+md
-				order: 0 
-				padding-left: 0
-	&__col
+.article
+	display: flex
+	align-items: center
+	justify-content: space-between
+	+md
+		flex-direction: column
+	&__img
 		width: 50%
-		text-align: center
 		+md
 			width: 100%
-		&_sm
-			max-width: 531px
+	&__text
+		width: 50%
+		text-align: center
+		+clr
+		&:first-child .article__text-wrap
 			padding-right: 20px
 			+md
-				max-width: 100%
 				padding-right: 0
-				padding-left: 0
-				margin-bottom: 30px
-			+sm
-				margin-bottom: 20px
-		&_or
-			order: 1
-			padding-right: 0
+		&:last-child .article__text-wrap
 			padding-left: 20px
+			float: right
 			+md
-				padding-left: 0
-				order: 0
+				padding-left: 0 
+		+md
+			width: 100%
+			padding-right: 0
+			padding-left: 0
+			margin-bottom: 30px
+			order: -1
+		+sm
+			margin-bottom: 20px
+	&__text-wrap
+		max-width: 531px
+		+md
+			max-width: 100%
 	&__subtitle-md
 		margin-bottom: 20px
 		+sm
 			margin-bottom: 10px
-	&__descr
-		color: $gray
-		line-height: 1.88
-		margin-bottom: 20px
-		font-family: $Futuras
-		font-weight: 500
-		font-size: 16px
-		+sm
-			font-size: 13px
-	&__list
-		display: flex
-		flex-wrap: wrap
-		margin: 0 -10px
-		+sm
-			margin: 0 -5px 
-	&__item
-		// width: 46.7%
-		// height: 200px
-		// padding-bottom: 32.3% 
-		padding-bottom: 65%
-		position: relative
-		flex: 1 1 50%
-		// margin: 10px
-		// &_bigh
-		// 	height: 403px
-		// 	+sm
-		// 		height: 260px
-		&_sm
-			padding-bottom: 32.3%
-	&__bg
-		position: absolute
-		left: 10px
-		right: 10px
-		top: 10px
-		bottom: 10px
-		background-size: cover
-		background-position: 50% 50%
-		background-repeat: no-repeat
-		+sm
-			left: 5px
-			top: 5px
-			right: 5px
-			bottom: 5px
-	&__link
-		text-decoration: none
-		font-size: 20px
-		font-weight: 500
-		color: $blue
-		 
+	&__btn
+		margin-top: 20px
+
+.col
+	width: 100%
+	padding: 0 10px
+	+sm
+		padding: 0 5px
+ 
+.col-6
+	width: 50%
+	padding: 0 10px
+	+sm
+		padding: 0 5px
+.row
+	display: flex
+	flex-wrap: wrap
+	margin-left: -10px
+	margin-right: -10px 
+	+sm
+		margin-left: -5px
+		margin-right: -5px
+
+.row:not(:last-child)
+	margin-bottom: 20px
+	+sm
+		margin-bottom: 10px
+
+.img-sm
+	display: block
+	padding-bottom: 62.1% 
+	background-size: cover
+	background-position: 50% 50%
+	background-repeat: no-repeat
+
+.img-lg
+	display: block
+	padding-bottom: 63.9% 
+	background-size: cover
+	background-position: 50% 50%
+	background-repeat: no-repeat
+
+.img-md
+	padding-bottom: 132.1%
+	display: block
+	background-size: cover
+	background-position: 50% 50%
+	background-repeat: no-repeat

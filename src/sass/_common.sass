@@ -1,13 +1,20 @@
 body
 	font-family: $Futura
-	font-weight: 500 
+	font-weight: 500
+	font-size: 16px
+	color: $gray
+	line-height: 1.88
+	+sm
+		font-size: 13px
+		line-height: 1.54
 
 .inner
 	max-width: 1060px
 	padding:  0 30px
 	margin: 0 auto
 	+sm
-		padding: 0 15px 
+		padding: 0 15px
+
 .in
 	max-width: 1260px
 	padding: 0 30px
@@ -20,19 +27,27 @@ body
 	font-weight: 500
 	color: $white
 	text-transform: uppercase
+	line-height: 1.2 
 	+sm
 		font-size: 25px
+	&_futura-futuris
+		font-family: $Futuras
 
 .subtitle-md
 	display: inline-block
-	color: #191926
-	font-family: $Futura
+	color: $black
 	font-weight: 500
 	font-size: 30px
 	text-transform: uppercase
 	position: relative
+	line-height: 1.2
 	+sm
 		font-size: 15px
+	&_lucida
+		font-family: $Lucida
+		font-weight: 700
+	&_futura-futuris
+		font-family: $Futuras
 	&:before
 		content: ''
 		position: absolute
@@ -44,7 +59,7 @@ body
 		background-color: #d4d4d4
 		+sm
 			width: 40px
-			right: -60px
+			right: -50px
 	&:after
 		content: ''
 		position: absolute
@@ -56,14 +71,17 @@ body
 		background-color: #d4d4d4
 		+sm
 			width: 40px
-			left: -60px
+			left: -50px
 
 .title-sm
 	color: $black
 	font-size: 24px
 	font-weight: 500
+	font-family: $Futuras
+	line-height: 1.5 
 	+sm
-		font-size: 12px
+		font-size: 15px
+		line-height: 1.2
 	&_white
 		color: $white
 		text-transform: uppercase
@@ -71,14 +89,21 @@ body
 .btn
 	display: inline-block
 	background-color: $blue
-	max-width: 227px
-	width: 100%
+	min-width: 227px 
+	padding: 0 60px 
 	height: 50px
 	line-height: 50px
 	font-size: 14px
 	text-decoration: none
 	color: $white
 	border-radius: 5px
+	font-family: $Futuras
+	+sm
+		min-width: 128px
+		padding: 0 14px 
+		font-size: 13px
+		height: 35px
+		line-height: 35px
 	&_green
 		background-color: $green
 
@@ -89,6 +114,17 @@ body
 	position: relative
 	&__title-lg
 		text-align: center
-		padding: 128px 0
+		padding: 120px 0
 		+sm
-			padding: 64px 0
+			padding: 65px 0
+
+.link
+	text-decoration: none
+	font-size: 20px
+	font-weight: 500
+	color: $blue
+	line-height: 1.2
+	margin-top: 20px
+	display: inline-block
+	+sm
+		display: none
