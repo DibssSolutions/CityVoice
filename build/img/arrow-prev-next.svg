@@ -1,0 +1,16 @@
+<svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.24 902.48">
+    <defs>
+        <style>
+            .cls-1{fill:#fff}.cls-2,.cls-3{fill:none;stroke-linecap:round;stroke-miterlimit:10}.cls-2{stroke:#fff}.cls-3{stroke:#eee}
+        </style>
+    </defs>
+    <title>
+        arrow-prev-next
+    </title>
+    <path class="cls-1" d="M292.07 278.48z"/>
+    <path class="cls-2" d="M292.07 278.48z"/>
+    <path class="cls-1" d="M1156.88 617.8l-387.32-403a49.11 49.11 0 0 1 0-67.53l32-33.29a44.65 44.65 0 0 1 64.91 0l387.32 403a49.11 49.11 0 0 1 0 67.53l-32 33.3a44.66 44.66 0 0 1-64.91-.01z" transform="translate(-755.5 -99.5)"/>
+    <path class="cls-3" d="M1156.88 617.8l-387.32-403a49.11 49.11 0 0 1 0-67.53l32-33.29a44.65 44.65 0 0 1 64.91 0l387.32 403a49.11 49.11 0 0 1 0 67.53l-32 33.3a44.66 44.66 0 0 1-64.91-.01z" transform="translate(-755.5 -99.5)"/>
+    <path class="cls-1" d="M1253.68 584.51l-387.33 403a44.65 44.65 0 0 1-64.91 0l-32-33.29a49.13 49.13 0 0 1 0-67.53l387.33-403a44.65 44.65 0 0 1 64.91 0l32 33.29a49.15 49.15 0 0 1 0 67.53z" transform="translate(-755.5 -99.5)"/>
+    <path class="cls-3" d="M1253.68 584.51l-387.33 403a44.65 44.65 0 0 1-64.91 0l-32-33.29a49.13 49.13 0 0 1 0-67.53l387.33-403a44.65 44.65 0 0 1 64.91 0l32 33.29a49.15 49.15 0 0 1 0 67.53z" transform="translate(-755.5 -99.5)"/>
+</svg>
