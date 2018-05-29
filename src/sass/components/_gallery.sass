@@ -41,19 +41,6 @@
 		+md
 			padding: 15px
 
-.slick-slide.slick-active
-	.photo-small
-		border: 4px solid white
-		transition: border-color .3s
-.slick-slide.slick-current.slick-active
-	.photo-small
-		transition: border-color .3s
-		border: 4px solid $blue
-	.photo-small_video
-		transition: border-color .3s, opacity .3s
-		&::before
-			opacity: 0
-					
 .slider
 	&__row
 		position: relative
@@ -154,9 +141,10 @@
 .slider__row_border
 	margin-top: 30px
 
-.slick-list.draggable
-	width: 100%
-	height: 100%
+.slick-list
+	.slider__row_border &
+		margin: 0 -4px
+
 
 .photo
 	position: relative
@@ -199,12 +187,47 @@
 		font-size: 12px	
 
 .photo-small
-	width: 133px !important
+	position: relative
+	width: 133px
 	height: 78px
 	background-repeat: no-repeat
 	background-size: cover
 	background-position: 50% 50%
 	cursor: pointer
+	border: 4px solid transparent
+	transition: border-color .3s
+	.slick-slide.slick-current.slick-active &
+		border-color: $blue
+	.slick-slide &
+		margin: 0 4px
+		width: calc(100% - 12px) !important
+	&::after
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		top: 0
+	&_video
+		&::before
+			content: url(../img/play.svg)
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			width: 24px
+			height: 24px
+			z-index: 3
+			opacity: 1
+			transition: opacity .3s, transform .3s
+			.slick-slide.slick-current.slick-active &
+				opacity: 0
+		&:after
+			background-color: rgba(25, 25, 38, 0.5)
+		&:hover
+			&::before
+				transform: translate(-50%,-50%) scale(1.3)
+						
 
 .video
 	position: relative
@@ -246,31 +269,6 @@
 				transform: translate(-50%,-50%) scale(1)	
 	+sm
 		height: 164px
-
-.photo-small_video
-	position: relative
-	&::before
-		content: url(../img/play.svg)
-		position: absolute
-		top: 50%
-		left: 50%
-		transform: translate(-50%,-50%)
-		width: 24px
-		height: 24px
-		z-index: 3
-		opacity: 1
-		transition: opacity .3s, transform .3s
-	&::after
-		content: ''
-		position: absolute
-		bottom: 0
-		left: 0
-		width: 100%
-		height: 100%
-		background-color: rgba(25, 25, 38, 0.5)
-	&:hover
-		&::before
-			transform: translate(-50%,-50%) scale(1.3)		
 
 .scroll
 	&__row
