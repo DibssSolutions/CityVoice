@@ -125,10 +125,8 @@
 		top: 0%
 		right: 25px
 		transform: translate(50%,-50%)
-		width: 24px
-		z-index: 3
-		+md
-			width: 12px	
+		width: 8px
+		z-index: 3	
 
 .fancybox-button.fancybox-button--arrow_left
 	svg
@@ -139,10 +137,8 @@
 		top: 0%
 		left: 25px
 		transform: translate(-50%,-50%) rotate(180deg)
-		width: 24px
+		width: 8px
 		z-index: 3
-		+md
-			width: 12px
 
 .fancybox-caption
 	font-size: 20px
@@ -150,6 +146,7 @@
 	line-height: 1.5
 	text-align: center
 	color: $white
+	font-family: $Futura
 
 .fancybox-caption::after
 	border-bottom: none
@@ -330,7 +327,26 @@
 		height: 164px
 		margin-right: 0
 
+.ps__rail-x:focus,
+.ps__rail-x:hover,
+.ps__rail-y:focus,
+.ps__rail-y:hover
+	background-color: none
+	opacity: 1
+.ps__rail-x, .ps__rail-y
+	opacity: 1
+
+.ps__thumb-x
+	height: 6px
 
 .ps__thumb-x,
 .ps__thumb-y
+	background-color: $blue
+	cursor: pointer
+
+	
+
+.ps__rail-x:focus>.ps__thumb-x,
+.ps__rail-x:hover>.ps__thumb-x
+	height: 6px
 	background-color: $blue
