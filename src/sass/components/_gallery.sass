@@ -41,21 +41,22 @@
 		+md
 			padding: 15px
 
+.slick-slide.slick-active
+	.photo-small
+		border: 4px solid white
+		transition: border-color .3s
+.slick-slide.slick-current.slick-active
+	.photo-small
+		transition: border-color .3s
+		border: 4px solid $blue
+	.photo-small_video
+		transition: border-color .3s, opacity .3s
+		&::before
+			opacity: 0
+					
 .slider
 	&__row
 		position: relative
-		.slick-slide.slick-active
-			.photo-small
-				border: 4px solid white
-				transition: border-color .3s
-		.slick-slide.slick-current.slick-active
-			.photo-small
-				transition: border-color .3s
-				border: 4px solid $blue
-			.photo-small_video
-				transition: border-color .3s, opacity .3s
-				&::before
-					opacity: 0			
 		+md
 			display: flex
 			flex-direction: column
