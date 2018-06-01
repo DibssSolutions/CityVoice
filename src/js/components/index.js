@@ -7,3 +7,4 @@ import './checked-field';
 import './header-animation';
 import './page-animation';
 import './scroll-btn';
+import './map';

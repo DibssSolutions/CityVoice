@@ -7,6 +7,8 @@
 	font-size: 16px
 	font-family: $Futuras 
 	background-color: $black 
+	&_white
+		background-color: $white 
 	&[header-anim-y="top"]
 		transform: translateY(-110px)
 		opacity: 0
@@ -33,6 +35,8 @@
 		background-color: $black 
 		+sm
 			height: 50px
+		.header_white &
+			background-color: $white 
 	&__out-navigation
 		width: 100%
 		+md
@@ -47,6 +51,8 @@
 			text-align: center
 			transition: transform .5s
 			background-color: $black 
+			.header_white &
+				background-color: $white 
 		+sm
 			padding-top: 68px
 		.is-open-menu &
@@ -60,6 +66,9 @@
 			margin-top: -100vh
 	&__out
 		background-color: $black 
+		.header_white &
+			background-color: $white 
+			box-shadow: 0 1px 1px rgba($black, .1) 
 		+sm
 			height: 100vh
 			overflow: auto
@@ -73,6 +82,10 @@
 			padding-top: 40px
 			padding-bottom: 0
 			border: 0 
+		.header_white &
+			position: relative
+			z-index: 3
+			background-color: $white 
 	&__btn
 		position: relative
 		margin: 0 auto -35px
@@ -83,6 +96,8 @@
 		+sm
 			margin-top: 0
 			margin-bottom: 0
+		.header_white &
+			z-index: 2
 	&__reserve
 		position: relative
 		margin-top: 29px
@@ -96,6 +111,8 @@
 			width: 137px
 			height: 1px
 			background-color: rgba($white, 0.1) 
+			.header_white &
+				background-color: rgba(#595968, 0.7) 
 
 .navigation
 	font-size: 0
@@ -129,6 +146,8 @@
 			display: block
 		+hover
 			color: $white 
+			.header_white &
+				color: #191926 
 		&.is-active
 			+md
 				padding: 0 28px
@@ -136,6 +155,8 @@
 				border-bottom: 1px solid $blue 
 				vertical-align: top
 				display: inline-block
+				.header_white &
+					color: #191926 
 		&:not(:first-child)
 			margin-left: 32px
 			+lg
@@ -147,6 +168,9 @@
 		color: currentColor 
 		transition: color .3s
 		display: block
+		&:hover
+			.header_white &
+				color: #191926 
 		
 .logo
 	position: absolute
@@ -162,6 +186,9 @@
 		fill: $white
 		width: 100%
 		height: auto
+		path
+			.header_white &
+				fill: #191926 
 	img
 		max-width: 100%
 
@@ -184,6 +211,8 @@
 			color: $white 
 		&.is-active
 			color: $white 
+			.header_white &
+				color: #191926 
 		&:not(:first-child)
 			margin-left: 5px
 	&__link,
@@ -193,21 +222,29 @@
 		display: block
 		+hover
 			color: $white 
+		&:hover
+			.header_white &
+				color: #191926 
 
 .header-tabs
 	&__list
 		margin: 0 auto
-		padding: 0 10px
-		max-width: 392px
+		max-width: 372px
 		width: 100%
 		text-align: center
+		border-bottom: 1px solid rgba($white, .1)
 		display: table
+		.header_white &
+			border-bottom: 1px solid #9393a5
 	&__item
 		padding: 0 14px 14px
 		vertical-align: top
 		border-bottom: 1px solid transparent 
 		transition: color .3s, border-color .3s
 		display: table-cell
+		.header_white &
+			position: relative
+			top: 1px
 		+sm
 			padding: 0 8px 4px
 			font-size: 13px
@@ -237,6 +274,8 @@
 	+sm
 		font-size: 10px
 		height: 20px
+	.header_white &
+		color: #191926 
 	&:before
 		position: absolute
 		content: ""
@@ -250,6 +289,9 @@
 		background-color: $black 
 		+sm
 			width: 200px
+		.header_white &
+			box-shadow: 0 1px 1px rgba($black, .1) 
+			background-color: $white
 	&__text
 		position: absolute
 		top: 0
@@ -271,6 +313,8 @@
 	user-select: none
 	text-align: center
 	background-color: transparent 
+	.header_white &
+		color: #191926 
 	.header__out &
 		position: relative
 		bottom: -52px
@@ -290,6 +334,8 @@
 		font-size: 10px
 		vertical-align: top
 		line-height: 1
+		.header_white &
+			fill: #191926 
 	&__text
 		vertical-align: top
 		line-height: 1
@@ -379,6 +425,8 @@
 		border-top: 2px solid $white
 		opacity: 0.87
 		transition: width 0.2s ease-in-out, opacity 0.2s ease-in-out, transform 0.2s ease-in-out
+		.header_white &
+			border-color: #595968  
 		+sm
 			width: 12px
 			border-width: 1px
