@@ -1,0 +1,122 @@
+.form
+	margin: 0 auto
+	line-height: 1.4
+	padding: 0 10px
+	max-width: 392px
+	display: block
+
+.form-row
+	margin: 0 -20px
+	+clr
+	&:not(:first-child)
+		margin-top: 15px
+
+.form-col	
+	float: left
+	width: 50%
+	padding: 0 20px
+
+.form-control
+	position: relative
+	&:not(:first-child)
+		margin-top: 15px
+		.label
+			margin-top: 15px
+.form-footer
+	&:not(:first-child)
+		margin-top: 20px
+		+sm
+			margin-top: 10px
+
+.input,
+.textarea
+	padding: 18px 0
+	font-family: $Futuras 
+	width: 100%
+	height: 58px
+	font-size: 16px
+	color: $black
+	border-bottom: 1px solid $gray 
+	transition: border-color .3s 
+	background-color: transparent 
+	display: block
+	+sm
+		font-size: 13px
+		height: 30px
+	&::placeholder
+		color: $gray
+		transition: color .3s 
+	.form-control.is-filled &
+		border-color: $blue 
+		&::placeholder
+			color: $black
+	&_white
+		color: $white 
+		border-color: rgba($white, .1) 
+		&::placeholder
+			color: rgba($white, .5) 
+		.form-control.is-filled &
+			&::placeholder
+				color: $white 
+
+.label
+	margin-bottom: 17px
+	font-family: $Futuras
+	font-size: 16px
+	color: $gray
+	transition: color .3s
+	vertical-align: top 
+	cursor: pointer
+	user-select: none
+	display: inline-block
+	+sm
+		margin-bottom: 6px
+		font-size: 13px
+	.form-control.is-filled &
+		color: $black
+	&_white
+		color: rgba($white, .5) 
+		.form-control.is-filled &
+			color: $white 
+		
+.textarea
+	padding: 10px
+	height: 82px
+	border-radius: 5px
+	border: 1px solid $gray 
+	resize: none
+	+sm
+		height: 66px
+	&_white
+		color: $black
+		border-color: $white 
+		background-color: $white 
+	
+.btn
+	display: inline-block
+	background-color: $blue
+	min-width: 227px 
+	padding: 12px 60px
+	font-size: 14px
+	text-decoration: none
+	color: $white
+	border-radius: 5px
+	font-family: $Futuras
+	text-align: center
+	transition: background-color .3s
+	.form-footer &
+		width: 100%
+	+hover
+		background-color: lighten($blue, 4%)
+	+sm
+		min-width: 128px
+		padding: 9px 14px
+		font-size: 13px
+		font-weight: 500 
+	&_lg
+		padding: 16px 60px
+		font-weight: 700 
+	&_green
+		background-color: $green
+		+hover
+			background-color: lighten($green, 4%)

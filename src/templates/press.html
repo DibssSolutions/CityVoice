@@ -4,9 +4,9 @@ title: Press
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
+
+	{{ header.block() }}
 	
-	
-	{% include "partials/_header.html" %}
 	<div class="press">
 		<div class="press__top-block top-block" style="background-image: url(http://via.placeholder.com/1140x300);">
 			<div class="top-block__inner inner">
@@ -39,7 +39,6 @@ title: Press
 		<!-- </div> -->
 	</div>
 
-		
-		
+	{% include 'partials/_footer.html' %}
 
 {% endblock %}

@@ -1,4 +1,6 @@
 {% import "partials/_mixins.html" as mixins %}
+{% import "partials/_header.html" as header %}
+{% import "partials/_footer-small.html" as footerSmall %}
 <!doctype html>
 <html>
   <head>
@@ -11,7 +13,7 @@
     <link rel="stylesheet" media="all" href="css/app.css">
     {# {% include "../partials/_media-tags.html" %} #}
   </head>
-  <body>
+  <body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}>
 
     <!-- BEGIN content -->
     <div class="out">

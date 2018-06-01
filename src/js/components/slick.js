@@ -1,4 +1,3 @@
-// function slickSlider() {
 import slick from 'slick-carousel';
 
 const sliderWrap = $('.js-slider-wrap');

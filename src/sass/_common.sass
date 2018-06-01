@@ -4,9 +4,26 @@ body
 	font-size: 16px
 	color: $gray
 	line-height: 1.88
+	+font-smoothing
+	transition: opacity .2s, visibility .2s
+	opacity: 0
+	visibility: hidden
+	&.is-animated
+		opacity: 1
+		visibility: visible
+	&.is-hidden
+		+sm
+			position: fixed
+			top: 0
+			left: 0
+			width: 100%
 	+sm
 		font-size: 13px
 		line-height: 1.54
+
+.out
+	position: relative
+	overflow: hidden
 
 .inner
 	max-width: 1060px
@@ -86,23 +103,6 @@ body
 		color: $white
 		text-transform: uppercase
 
-.btn
-	display: inline-block
-	background-color: $blue
-	min-width: 227px 
-	padding: 12px 60px
-	font-size: 14px
-	text-decoration: none
-	color: $white
-	border-radius: 5px
-	font-family: $Futuras
-	+sm
-		min-width: 128px
-		padding: 7px 14px 
-		font-size: 13px
-	&_green
-		background-color: $green
-
 .top-block
 	background-position: 50% 50%
 	background-size: cover
@@ -124,3 +124,8 @@ body
 	display: inline-block
 	+sm
 		display: none
+
+.mob-show
+	display: none
+	+sm
+		display: block

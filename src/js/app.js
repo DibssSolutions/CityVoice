@@ -1,4 +1,7 @@
-import './components/tabs.js';
-import './components/slick.js';
-import './components/fancybox3.js';
-import './components/perfect-scrollbar.js';
+import vide from 'vide';
+import {DOC, BODY, NO_TOUCH} from './constants';
+
+DOC.ready(() => {
+  !('ontouchstart' in window) && BODY.addClass(NO_TOUCH);
+  require('./components');
+});

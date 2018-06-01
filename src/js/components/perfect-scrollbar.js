@@ -20,7 +20,7 @@ const initPS = () => {
 initPS();
 let timeOut;
 
-$(window).on('resize', () => {
+WIN.on('resize', () => {
   clearTimeout(timeOut);
   timeOut = setTimeout(() => {
     initPS();

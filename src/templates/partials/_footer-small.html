@@ -1,0 +1,14 @@
+{% import "partials/_mixins.html" as mixins %}
+{% macro block(props) %}
+<!-- begin footer-home -->
+<footer class="footer-small"{% if props.attr %} {{ props.attr }}{% endif %}>
+	<div class="footer-small__inner inner">
+		<ul class="footer-small__list">
+			<li class="footer-small__item"><a href="tel:+74950000000">+7 (495) 000-00-00</a></li>
+			<li class="footer-small__item">москва, пресненская наб., строение 2</li>
+			<li class="footer-small__item"><a href="mailto:mail@cityvaice.ru">MAIL@CITYVOICE.RU</a></li>
+		</ul>
+	</div>
+</footer>
+<!-- end footer-home -->
+{% endmacro %}

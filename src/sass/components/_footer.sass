@@ -1,0 +1,154 @@
+.footer
+	text-align: center
+	color: $white 
+	font-family: $PTSans 
+	font-size: 14px
+	background-color: $black 
+	&__inner
+		max-width: 776px
+		+sm
+			padding: 0
+	&__top
+		padding: 35px 0 37px
+		text-align: center
+		+sm
+			padding: 33px 0 26px
+	&__soc,
+	&__contact,
+	&__copy
+		border-top: 1px solid rgba($white, .1) 
+	&__logo
+		vertical-align: top
+		display: inline-block
+		+sm
+			width: 87px
+		img
+			max-width: 100%
+			display: block
+	&__soc
+		padding: 18px 0 22px
+		+sm
+			padding: 15px 0
+	&__contact
+		padding: 13px 0
+		+sm
+			padding: 18px 0
+	&__list
+		font-size: 0
+		+sm
+			display: flex
+			flex-wrap: wrap
+	&__item
+		position: relative
+		padding: 0 22px
+		font-size: 14px
+		line-height: 1.43
+		vertical-align: top
+		display: inline-block
+		+sm
+			width: 100%
+			display: block
+		&:before
+			position: absolute
+			content: "" 
+			top: 0
+			left: 0
+			bottom: 0
+			width: 1px
+			border-radius: 1px
+			background-color: $white 
+			+sm
+				display: none
+		&:first-child
+			padding-left: 0
+			+sm
+				margin-bottom: 7px
+				padding-left: 22px
+			&:before
+				display: none
+		&:last-child
+			padding-right: 0
+			+sm
+				padding-right: 22px
+		&:nth-child(2)
+			+sm
+				margin-top: 18px
+				padding-top: 18px
+				border-top: 1px solid rgba($white, .1) 
+				order: 3
+	&__copy
+		padding: 20px 0 16px
+		text-transform: lowercase
+		+sm
+			padding: 14px 0
+.soc
+	font-size: 0
+	&__item
+		vertical-align: top
+		display: inline-block
+		&:not(:first-child)
+			margin-left: 20px
+	&__link
+		width: 30px
+		display: block
+		img
+			max-width: 100%
+			display: block
+
+.mail
+	text-transform: uppercase
+.phone,
+.mail
+	color: $white 
+	transition: border-color .3s 
+	border-bottom: 1px solid transparent 
+	+hover
+		border-color: currentColor 
+
+.footer-small
+	position: relative
+	height: 40px
+	padding: 10px 0 5px
+	font-family: $PTSans 
+	line-height: 1.4
+	z-index: 10
+	width: 100%
+	font-size: 0
+	color: $white 
+	text-align: center
+	background-color: $black 
+	+sm
+		display: none
+	&[footer-small-anim-y="bottom"]
+		transform: translateY(40px)
+		opacity: 0
+		+md
+			transform: translateY(0)
+			opacity: 1
+	&__item
+		position: relative
+		padding: 0 22px
+		font-size: 14px
+		vertical-align: top
+		display: inline-block
+		&:before
+			position: absolute
+			content: "" 
+			top: 0
+			left: 0
+			bottom: 0
+			width: 1px
+			border-radius: 1px
+			background-color: $white 
+		&:first-child
+			padding-left: 0
+			&:before
+				display: none
+		&:last-child
+			padding-right: 0
+	a
+		color: currentColor
+		border-bottom: 1px solid transparent
+		transition: border-color .3s
+		+hover
+			border-color: $white

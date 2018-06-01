@@ -1,6 +1,8 @@
 ProjectTitle: city-voice
 
 PageList:
+- file: home.html
+  ready: 100
 - file: press.html
   ready: 50
 - file: menu.html

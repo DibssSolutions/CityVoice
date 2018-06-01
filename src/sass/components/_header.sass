@@ -1,0 +1,395 @@
+.header
+	position: relative
+	z-index: 100
+	color: $gray
+	width: 100%
+	font-weight: 500 
+	font-size: 16px
+	font-family: $Futuras 
+	background-color: $black 
+	&[header-anim-y="top"]
+		transform: translateY(-110px)
+		opacity: 0
+		+md
+			transform: translateY(0)
+			opacity: 1
+	&__inner
+		margin: 0 auto
+		padding: 0 30px
+		+clr
+		+sm
+			padding: 0 15px
+	&__top
+		position: relative
+		z-index: 4
+		padding: 17px 50px 19px
+		text-align: center
+		font-size: 0
+		height: 75px
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-wrap: wrap
+		background-color: $black 
+		+sm
+			height: 50px
+	&__out-navigation
+		width: 100%
+		+md
+			position: absolute
+			top: -100vh
+			left: 50%
+			width: 100vw
+			height: 100vh
+			margin-left: -50vw
+			overflow: auto
+			padding-top: 100px
+			text-align: center
+			transition: transform .5s
+			background-color: $black 
+		+sm
+			padding-top: 68px
+		.is-open-menu &
+			transform: translateY(100vh)
+	&__bottom
+		position: relative
+		height: 593px
+		margin-top: -593px
+		+sm
+			height: 100vh
+			margin-top: -100vh
+	&__out
+		background-color: $black 
+		+sm
+			height: 100vh
+			overflow: auto
+			padding-bottom: 169px 
+	&__wrap
+		margin: 0 auto
+		padding: 26px 0 78px
+		max-width: 718px
+		border-top: 1px solid rgba($white, 0.1) 
+		+sm
+			padding-top: 40px
+			padding-bottom: 0
+			border: 0 
+	&__btn
+		position: relative
+		margin: 0 auto -35px
+		width: 170px
+		text-align: center
+		+md
+			margin-bottom: -16px
+		+sm
+			margin-top: 0
+			margin-bottom: 0
+	&__reserve
+		position: relative
+		margin-top: 29px
+		padding: 45px 0 50px
+		&:before
+			position: absolute
+			content: "" 
+			top: 0
+			left: 50%
+			margin-left: -69px
+			width: 137px
+			height: 1px
+			background-color: rgba($white, 0.1) 
+
+.navigation
+	font-size: 0
+	vertical-align: top
+	display: inline-block
+	width: calc(50% - 107px)
+	+md
+		color: #595968 
+		width: 100%
+	&:not(:first-child)
+		margin-left: 213px
+		+lg
+			margin-left: 153px
+		+md
+			margin: 25px 0 0
+	&_left
+		text-align: right
+		+md
+			text-align: center
+	&_right
+		text-align: left
+		+md
+			text-align: center
+	&__item,
+	li
+		vertical-align: top
+		font-size: 16px
+		display: inline-block
+		+md
+			font-size: 13px
+			display: block
+		+hover
+			color: $white 
+		&.is-active
+			+md
+				padding: 0 28px
+				color: $white 
+				border-bottom: 1px solid $blue 
+				vertical-align: top
+				display: inline-block
+		&:not(:first-child)
+			margin-left: 32px
+			+lg
+				margin-left: 15px
+			+md
+				margin: 25px 0 0
+	&__link,
+	a
+		color: currentColor 
+		transition: color .3s
+		display: block
+		
+.logo
+	position: absolute
+	top: 17px
+	left: 50%
+	margin-left: -36px
+	width: 73px
+	+sm
+		top: 10px 
+		width: 47px
+		margin-left: -23px
+	svg
+		fill: $white
+		width: 100%
+		height: auto
+	img
+		max-width: 100%
+
+.lang
+	position: absolute
+	top: 24px
+	right: 0
+	+sm
+		top: 16px 
+		color: #595968 
+	&__item,
+	li
+		font-size: 14px
+		text-transform: uppercase
+		vertical-align: top
+		display: inline-block
+		+sm
+			font-size: 13px
+		+hover
+			color: $white 
+		&.is-active
+			color: $white 
+		&:not(:first-child)
+			margin-left: 5px
+	&__link,
+	a
+		color: currentColor 
+		transition: color .3s
+		display: block
+		+hover
+			color: $white 
+
+.header-tabs
+	&__list
+		margin: 0 auto
+		padding: 0 10px
+		max-width: 392px
+		width: 100%
+		text-align: center
+		display: table
+	&__item
+		padding: 0 14px 14px
+		vertical-align: top
+		border-bottom: 1px solid transparent 
+		transition: color .3s, border-color .3s
+		display: table-cell
+		+sm
+			padding: 0 8px 4px
+			font-size: 13px
+		+hover
+			color: $blue 
+		&.is-active
+			color: $blue 
+			border-color: $blue 
+	&__container
+		padding-top: 18px
+
+.btn-open-form 
+	position: relative
+	width: 170px
+	height: 35px
+	line-height: 1
+	font-weight: 500 
+	font-size: 16px
+	font-family: $Futuras 
+	color: $white 
+	cursor: pointer
+	user-select: none
+	text-transform: uppercase
+	vertical-align: top
+	background-color: transparent 
+	display: inline-block
+	+sm
+		font-size: 10px
+		height: 20px
+	&:before
+		position: absolute
+		content: ""
+		z-index: -1
+		left: 50%
+		transform: translateX(-50%)
+		bottom: 0
+		width: 250px
+		height: 250px
+		border-radius: 50% 
+		background-color: $black 
+		+sm
+			width: 200px
+	&__text
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+.btn-close-form
+	position: absolute
+	bottom: 0
+	left: 0
+	padding-top: 21px
+	z-index: 2
+	color: $white 
+	width: 170px
+	height: 58px
+	line-height: 58px
+	font-family: $PTSans
+	font-size: 16px 
+	cursor: pointer
+	user-select: none
+	text-align: center
+	background-color: transparent 
+	.header__out &
+		position: relative
+		bottom: -52px
+		margin: 0 auto -58px
+		font-size: 0 
+		display: none
+		+sm
+			display: block
+	.header__btn &
+		+sm
+			display: none
+	.icon
+		position: absolute
+		top: 0
+		left: 50%
+		margin-left: -5px
+		font-size: 10px
+		vertical-align: top
+		line-height: 1
+	&__text
+		vertical-align: top
+		line-height: 1
+		display: inline-block
+.btn-voise
+	position: absolute
+	right: 20px
+	top: 100%
+	margin-top: 20px
+	width: 26px
+	height: 26px
+	color: $white 
+	line-height: 1
+	font-size: 0
+	border-radius: 50% 
+	background-color: rgba($white, .1)
+	opacity: 0
+	+md
+		display: none
+	&.is-show
+		opacity: 1
+	+hover
+		.icon-no-voise
+			opacity: 1
+		.icon-voise
+			opacity: 0
+	&.is-off
+		.icon-no-voise
+			opacity: 1
+		.icon-voise
+			opacity: 0
+		// +hover
+		// 	.icon-no-voise
+		// 		opacity: 0
+		// 	.icon-voise
+		// 		opacity: 1
+	.icon
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50% ,-50%)
+		font-size: 12px
+		transition: opacity .3s
+		&-no-voise
+			opacity: 0
+			
+.btn-nav
+	position: absolute
+	top: 27px
+	left: 0
+	z-index: 11
+	display: none
+	width: 24px
+	height: 18px
+	background: none
+	+md
+		display: block
+	+sm
+		top: 20px 
+		width: 12px
+		height: 9px
+	&:before
+		position: absolute
+		content: "" 
+		top: -5px
+		left: -5px
+		right: -5px
+		bottom: -5px
+	.header.is-open-menu &
+		span
+			width: 19px
+			+sm
+				width: 12px
+			&:nth-child(1)
+				transform: rotate(45deg) translate3d(3px,-1px,0)
+				+sm
+					transform: rotate(45deg) translate3d(1px,-3px,0)
+			&:nth-child(2)
+				opacity: 0
+				transform: scaleX(0.5)
+			&:nth-child(3)
+				transform: rotate(-45deg) translate3d(3px,1px,0)
+	span
+		position: absolute
+		left: 0
+		width: 24px
+		border-top: 2px solid $white
+		opacity: 0.87
+		transition: width 0.2s ease-in-out, opacity 0.2s ease-in-out, transform 0.2s ease-in-out
+		+sm
+			width: 12px
+			border-width: 1px
+		&:nth-child(1)
+			top: 0
+			transform-origin: left top
+		&:nth-child(2)
+			top: 8px
+			transform-origin: left center
+			+sm
+				top: 4px
+		&:nth-child(3)
+			bottom: 0
+			transform-origin: left bottom
