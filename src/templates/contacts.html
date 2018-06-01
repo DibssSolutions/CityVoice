@@ -1,0 +1,72 @@
+---
+title: Contacts
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	{{ header.block() }}
+	
+	<div class="contacts">
+		<div class="top-block" style="background-image: url(http://via.placeholder.com/1140x300);">
+			<div class="top-block__inner inner">
+				<h1 class="top-block__title-lg title-lg title-lg_futura-futuris">CONTACTS</h1>
+			</div>
+		</div>
+		<div class="contacts__inner">
+			<div class="contacts__wrap">
+				<h3 class="contacts__title">GET IN TOUCH</h3>
+				<div class="contacts__group">
+					<div class="contacts__row">
+						<a href="tel:+74950000000" class="contacts__phone">+7 (495) 000-00-00</a>
+					</div>
+					<div class="contacts__row">
+						<a href="mailto:mail@cityvoice.ru" class="contacts__mail">mail@cityvoice.ru</a>
+					</div>
+				</div>
+				<div class="contacts__group">
+					<div class="contacts__row">
+						<div class="contacts__event">
+							<div class="contacts__name">Ресторан</div>
+							<div class="contacts__time">12:00 ДО 0:00</div>
+						</div>
+					</div>
+					<div class="contacts__row">
+						<div class="contacts__event">
+							<div class="contacts__name">Караоке</div>
+							<div class="contacts__time">21:00 ДО 6:00</div>
+						</div>
+					</div>
+				</div>
+				<div class="contacts__group">
+					<div class="contacts__address">Москва, пресенская наб., 8, строение 2</div>
+					<div class="contacts__info">FREE паркинг</div>
+				</div>
+			</div>
+			<div class="contacts__form">
+				<form action="/" class="form">
+					<div class="form-control js-form-control">
+						<input type="text" class="input input" placeholder="Name">
+					</div>
+					<div class="form-control js-form-control">
+						<input type="text" class="input input" placeholder="Phone">
+					</div>
+					<div class="form-control js-form-control">
+						<input type="text" class="input input" placeholder="Email">
+					</div>
+					<div class="form-control js-form-control">
+						<label for="textarea" class="label label">Message</label>
+						<textarea id="textarea" class="textarea textarea"></textarea>
+					</div>
+					<div class="form-footer">
+						<button class="btn btn_lg" type="submit">Send</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="map js-map"></div>
+	</div>	
+
+	{% include 'partials/_footer.html' %}
+
+{% endblock %}

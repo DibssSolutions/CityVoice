@@ -1,0 +1,57 @@
+.contacts
+	position: relative
+	z-index: 1
+	&__inner
+		margin: -30px auto
+		max-width: 1000px
+		display: flex
+	&__title
+		margin-bottom: 15px
+		font-family: $Futuras
+		font-size: 30px
+		font-weight: 500 
+		line-height: 1.3
+		text-align: center
+		color: $white 
+	&__wrap
+		padding: 95px 85px 50px
+		width: 410px
+		color: $white 
+		background-color: #191926 
+	&__form
+		padding: 72px 10px
+		flex-grow: 1
+		.form
+			margin: 0 auto
+	&__group
+		padding: 18px 0
+		border-top: 1px solid rgba($white, 0.1)
+	&__phone
+		color: $white
+		transition: border-color .3s
+		border-bottom: 1px solid transparent
+		+hover
+			border-color: currentColor  
+	&__mail
+		color: $blue 
+		transition: border-color .3s
+		border-bottom: 1px solid transparent
+		+hover
+			border-color: currentColor  
+	&__row
+		&:not(:first-child)
+			margin-top: 10px
+	&__event
+		display: flex
+		justify-content: space-between
+	&__name
+		color: #9393A5 
+	&__address
+		line-height: 1.5
+	&__info
+		font-family: $Futuras
+		margin-top: 20px
+		font-size: 20px
+		text-transform: uppercase
+		font-weight: 300 
+.map

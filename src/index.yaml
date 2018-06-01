@@ -4,16 +4,20 @@ PageList:
 - file: home.html
   ready: 100
 - file: press.html
-  ready: 50
+  ready: 100
 - file: menu.html
-  ready: 50
+  ready: 100
 - file: banquets.html
-  ready: 50
+  ready: 100
 - file: error.html
-  ready: 50
+  ready: 100
 - file: event.html
-  ready: 50
+  ready: 100
 - file: restaurant.html
-  ready: 50
+  ready: 100
 - file: gallery.html
-  ready: 50
+  ready: 100
+- file: karaoke.html
+  ready: 100
+- file: contacts.html
+  ready: 100

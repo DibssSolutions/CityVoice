@@ -5,6 +5,35 @@
 	max-width: 392px
 	display: block
 
+.btn-scroll
+	position: relative
+	width: 60px
+	height: 60px
+	border-radius: 50%
+	background-color: $white 
+	display: inline-block
+	+sm
+		width: 30px
+		height: 30px
+	.top-block &
+		position: absolute
+		left: 50%
+		bottom: 37px
+		z-index: 2
+		margin-left: -30px
+		+sm
+			bottom: 18px
+			margin-left: -15px
+	.icon-arrow-bottom
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		font-size: 15px
+		color: $blue 
+		+sm
+			font-size: 8px
+
 .form-row
 	margin: 0 -20px
 	+clr
