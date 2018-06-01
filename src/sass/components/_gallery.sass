@@ -64,11 +64,6 @@
 		transition: color .3s, border-color .3s
 		border-bottom: 2px solid $white
 		user-select: none
-		+md
-			padding: 15px 30px 11px
-		+sm
-			padding: 15px 15px 11px
-			font-size: 15px	
 		&:hover
 			color: $blue
 		&:first-child
@@ -78,6 +73,15 @@
 		&.is-active
 			border-bottom: 2px solid $blue
 			color: $blue
+		+md
+			padding: 15px 30px 11px
+		+sm
+			padding: 15px 15px 11px
+			font-size: 15px
+			&:first-child
+				padding-left: 19px
+			&:last-child
+				padding-right: 19px
 
 	&__container
 		padding: 30px 30px 38px
