@@ -51,8 +51,7 @@
 		border-radius: 4px
 		height: 0
 	&__item
-		display: inline-block
-		webkit-tap-highlight-color: rgba(0, 0, 0, 0)	
+		display: inline-block	
 		font-size: 14px
 		font-weight: 500
 		line-height: 1.43
@@ -64,8 +63,11 @@
 		cursor: pointer
 		transition: color .3s, border-color .3s
 		border-bottom: 2px solid $white
+		user-select: none
 		+md
-			padding: 15px 30px 11px	
+			padding: 15px 30px 11px
+		+sm
+			font-size: 15px	
 		&:hover
 			color: $blue
 		&:first-child
@@ -81,6 +83,8 @@
 		+md
 			padding: 40px 30px 100px
 			background-color: $beige
+		+sm
+			padding: 20px 15px 50px	
 
 .slider
 	&__row
@@ -208,7 +212,11 @@
 		height: 100%
 		background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.2) 50%)
 	+md
-		margin-bottom: 30px 	
+		margin-bottom: 30px
+	+sm
+		margin-bottom: 15px
+		&:last-child
+			margin-bottom: 0 	
 	+xs
 		height: 164px
 
@@ -325,6 +333,10 @@
 		&:hover
 			&::before
 				transform: translate(-50%,-50%) scale(1)
+	+sm
+		margin-bottom: 15px
+		&:last-child
+			margin-bottom: 0
 	+xs
 		height: 164px
 		&::before
@@ -357,7 +369,7 @@
 	background-repeat: no-repeat
 	background-size: cover
 	background-position: 50% 50%
-	border-radius: 3.5px
+	border-radius: 4px
 	margin-right: 20px
 	margin-bottom: 38px
 	&::after
@@ -366,7 +378,7 @@
 		content: ''
 		width: 100%
 		height: 100%
-		border-radius: 3.5px
+		border-radius: 4px
 		background-image: linear-gradient(to bottom, rgba(25, 25, 38, 0)0%, rgba(25, 25, 38, 0.67)80%)
 		transition: opacity .3s
 		opacity: 1
@@ -375,11 +387,13 @@
 		&::after
 			opacity: 0	
 	+md
+		border-radius: 0
 		width: calc(50% - 10px)
 		&:nth-child(even)
 			margin-right: 0
 		&::after
-			opacity: 1	
+			border-radius: 0
+			opacity: 1			
 	+xs
 		width: 100%
 		height: 164px
