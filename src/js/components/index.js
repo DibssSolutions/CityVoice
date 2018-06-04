@@ -8,3 +8,4 @@ import './header-animation';
 import './page-animation';
 import './scroll-btn';
 import './map';
+import './paralax';

@@ -1,0 +1,42 @@
+---
+title: Event-inner
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	{{ header.block() }}
+	
+	<div class="event">
+		<div class="event__top-block top-block" style="background-image: url(http://via.placeholder.com/1140x300);">
+			<div class="top-block__inner inner">
+				<h1 class="top-block__title-lg title-lg title-lg_futura-futuris"></h1>
+			</div>
+		</div>
+		<div class="event__inner">
+			<div class="event__article">
+				<div class="event__hero">
+					<div class="event__image" style="background-image: url(http://via.placeholder.com/500/440);"></div>
+					<div class="event__title title-sm">How To Set Intentions That Energize You</div>
+					<ul class="event__date-list">
+						<li class="event__date-item">25 Mar 2018</li>
+						<li class="event__date-item event__date-item_day">Friday</li>
+						<li class="event__date-item">20:00</li>
+					</ul>
+				</div>
+				<p>If you are in the market for kitchenware, you may be considering making the purchase of designer kitchenware products. As you debate the purchase of designer kitchenware products, you may be wondering what are some of the pros and cons to making the purchase of these types of products in this day and age. As with so many things in the 21st century, there definitely are pros and cons to making the purchase of designer kitchenware products.</p>
+				<p>Of course, for many people, one of the downsides to making the purchase of designer software is the price. In many instances, these types of products can be rather pricy. Indeed, depending on what type of product that you are considering making the purchase of, when it comes to the designer brands, these items oftentimes can be budget busting propositions.</p>
+				<p>By shopping around — including surfing around the Internet — you can (on occasion) save at least a bit of money on designer kitchenware products. Many people in this day and age have found themselves living on very restrictive budgets. Thus, if you want to attempt to save a bit of money on designer kitchenware products, you will want to spend the time shopping around. Again, keep in mind that deals that might be available in regard to designer kitchenware are to be found both in cyberspace and in the brick and mortar world. You will not want to limit your shopping to only one of these two important shopping venues.</p>
+			</div>
+			<div class="event__footer">
+				<a href="#" class="btn">Резерв</a>
+			</div>
+			<div class="prev-block">
+				<a href="#" class="btn-prev">Назад в события</a>
+			</div>
+		</div>
+	</div>	
+
+	{% include 'partials/_footer.html' %}
+
+{% endblock %}

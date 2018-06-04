@@ -9,7 +9,7 @@ const headerBottomHeight = $('.js-header-bottom').outerHeight();
 
 const headerStaggers = $('.js-header-bottom [data-stagger-y]');
 
-const headerTl = new TimelineMax({ paused: true });
+window.headerTl = new TimelineMax({ paused: true });
 
 headerTl
   .addLabel('start')
@@ -28,11 +28,11 @@ headerTl
   }, 0, 'start');
 
 btnOpenForm.on('click', () => { 
-  headerTl.play();
+  window.headerTl.play();
   BODY.addClass(HIDDEN);
 });
 btnCloseForm.on('click', () => { 
-  headerTl.reverse();
+  window.headerTl.reverse();
   BODY.removeClass(HIDDEN);
 });
 

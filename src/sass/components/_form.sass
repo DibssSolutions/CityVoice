@@ -1,9 +1,71 @@
 .form
+	position: relative
 	margin: 0 auto
 	line-height: 1.4
 	padding: 0 10px
 	max-width: 392px
 	display: block
+	.is-success & 
+		transform: translate3d(0,0,0)
+	
+.form-success
+	position: absolute
+	top: -2px
+	left: 0
+	bottom: -2px
+	z-index: 10
+	width: 100%
+	+vertical
+	color: $white
+	font-family: $Futuras 
+	background-color: #191926 
+	display: none
+	&_white
+		color: $black 
+		background-color: $white 
+	.form.is-success &
+		color: #9393A5 
+		display: block
+	&:after
+		position: absolute
+		content: "" 
+		height: 130px
+		left: 0
+		width: 100%
+		top: -103px
+		display: none
+		background-color: #191926 
+		.form-success_white &
+			background-color: $white 
+		.header &
+			display: block
+	&__wrap
+		position: relative
+		z-index: 1
+		padding: 0 15px
+		width: 100%
+		max-width: 425px
+		text-transform: uppercase
+		vertical-align: middle
+		display: inline-block
+		.header &
+			margin-top: -70px
+	&__icon
+		vertical-align: top
+		.icon
+			font-size: 43px 
+			+sm
+				font-size: 25px 
+			.form-success_white &
+				fill: #6AA2FF
+	&__text
+		margin-top: 25px
+		font-size: 20px
+		line-height: 1.55
+		font-weight: 300 
+		font-size: 20px
+		+sm
+			font-size: 15px
 
 .btn-scroll
 	position: relative
@@ -53,16 +115,16 @@
 			margin-top: 15px
 .form-footer
 	&:not(:first-child)
-		margin-top: 20px
+		margin-top: 18px
 		+sm
 			margin-top: 10px
 
 .input,
 .textarea
-	padding: 18px 0
+	padding: 16px 0
 	font-family: $Futuras 
 	width: 100%
-	height: 58px
+	height: 52px
 	font-size: 16px
 	color: $black
 	border-bottom: 1px solid $gray 
@@ -125,7 +187,7 @@
 	display: inline-block
 	background-color: $blue
 	min-width: 227px 
-	padding: 12px 60px
+	padding: 12px 30px
 	font-size: 14px
 	text-decoration: none
 	color: $white

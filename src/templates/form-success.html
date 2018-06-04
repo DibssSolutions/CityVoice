@@ -1,0 +1,77 @@
+---
+title: Home
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+<!-- begin home -->
+<div class="home">
+	{{ header.block({ 
+		attr: 'header-anim-y=top',
+		voise: true,
+		formSuccess: true
+	}) }}
+	<div class="bg-video js-bg-video" data-vide-bg="mp4: video/homeBg/Red-Hot-Chili-Peppers-Dark-Necessities, poster: video/homeBg/Red-Hot-Chili-Peppers-Dark-Necessities" data-vide-options="posterType: jpg, volume: 0.1">
+		<button class="bg-video__btn js-bg-video-btn" type="button">
+			<span class="bg-video__play">{{ mixins.icon('play') }}</span>
+		</button>
+	</div>
+	<div class="home__center">
+		<div class="home__content">
+			<div class="home__info js-home-info">
+				<div class="hone__name">
+					<svg width="347" height="54" viewBox="0 0 347 54" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					    <title>
+					        Fill 7
+					    </title>
+					    <defs>
+					        <path d="M315.833 44.373V1.008h22.853v4.706H320.94V18.15h17.746v4.774H320.94v16.607h17.746v4.841h-22.853zm-11.898-33.01c-2.082-2.22-4.233-3.901-6.585-4.976-2.354-1.077-4.974-1.613-7.796-1.613-2.286 0-4.572.47-6.722 1.345-2.15.942-4.1 2.284-5.646 3.9a17.903 17.903 0 0 0-3.765 5.78c-.806 2.084-1.21 4.437-1.21 6.991 0 2.018.202 3.902.74 5.58a14.4 14.4 0 0 0 2.217 4.706c1.748 2.488 3.832 4.372 6.386 5.716a18.17 18.17 0 0 0 8.2 1.95c2.757 0 5.377-.538 7.729-1.68 2.352-1.145 4.505-2.893 6.452-5.11v6.79c-2.149 1.613-4.434 2.756-6.922 3.565a24.687 24.687 0 0 1-7.66 1.207c-2.286 0-4.572-.335-6.723-1.006-2.15-.74-4.168-1.681-6.117-3.026-3.092-2.151-5.51-4.84-7.192-8.069-1.681-3.225-2.487-6.721-2.487-10.554 0-3.294.538-6.318 1.615-9.074 1.142-2.761 2.821-5.247 5.107-7.464a22.458 22.458 0 0 1 7.393-4.775C283.638.47 286.53 0 289.687 0c2.553 0 4.974.337 7.326 1.143 2.353.74 4.638 1.881 6.922 3.496v6.724zm-53.837 33.01h5.177V1.008h-5.177v43.365zM238.606 22.79c0 3.093-.605 5.986-1.748 8.742-1.143 2.756-2.824 5.178-4.974 7.33-2.217 2.081-4.771 3.763-7.595 4.906a23.44 23.44 0 0 1-8.873 1.746c-3.023 0-5.982-.603-8.804-1.746a23.531 23.531 0 0 1-7.528-4.907c-2.217-2.151-3.898-4.639-5.108-7.395-1.142-2.69-1.68-5.65-1.68-8.676 0-3.159.538-6.048 1.68-8.806 1.21-2.756 2.89-5.175 5.108-7.327 2.15-2.153 4.638-3.766 7.462-4.909C209.434.605 212.393 0 215.416 0c3.092 0 6.051.605 8.94 1.748a23.08 23.08 0 0 1 7.528 4.91 21.817 21.817 0 0 1 4.974 7.326 22.629 22.629 0 0 1 1.748 8.806zm-23.19 17.883c2.355 0 4.638-.47 6.789-1.342 2.15-.942 4.033-2.22 5.78-3.968a17.384 17.384 0 0 0 3.832-5.78c.941-2.154 1.345-4.438 1.345-6.793 0-2.485-.404-4.772-1.345-6.992a17.408 17.408 0 0 0-3.832-5.78c-1.68-1.681-3.63-2.957-5.78-3.899-2.151-.875-4.368-1.278-6.789-1.278-2.418 0-4.704.403-6.855 1.278a18.34 18.34 0 0 0-5.712 3.9c-1.68 1.747-2.959 3.697-3.832 5.846a18.158 18.158 0 0 0-1.344 6.925c0 2.355.403 4.64 1.278 6.793.939 2.151 2.217 4.032 3.898 5.78 1.745 1.748 3.697 3.093 5.779 3.968a17.996 17.996 0 0 0 6.788 1.342zm-45.905 5.38l-18.35-45.045h5.646l12.704 33.145 12.636-33.145h5.58L169.51 46.052zm-56.058-1.68V24.54L98.803 1.008h5.981l11.292 18.825 11.293-18.825h5.914L118.632 24.54v19.833h-5.179zm-38.108 0V5.915H63.112V1.008h29.641v4.907H80.587v38.458h-5.242zm-26.28 0h5.177V1.008h-5.176v43.365zM37.17 11.363c-2.085-2.22-4.238-3.901-6.59-4.976-2.35-1.077-4.972-1.613-7.796-1.613-2.286 0-4.57.47-6.72 1.345-2.153.942-4.1 2.284-5.648 3.9a17.934 17.934 0 0 0-3.763 5.78c-.806 2.084-1.209 4.437-1.209 6.991 0 2.018.202 3.902.74 5.58A14.4 14.4 0 0 0 8.4 33.077c1.747 2.488 3.832 4.372 6.385 5.716 2.554 1.279 5.243 1.95 8.2 1.95 2.757 0 5.377-.538 7.73-1.68 2.352-1.145 4.502-2.893 6.454-5.11v6.79c-2.153 1.613-4.44 2.756-6.924 3.565a24.69 24.69 0 0 1-7.663 1.207 22.62 22.62 0 0 1-6.72-1.006c-2.15-.74-4.169-1.681-6.118-3.026-3.158-2.151-5.513-4.84-7.191-8.069C.873 30.188 0 26.692 0 22.86c0-3.294.605-6.318 1.679-9.074 1.143-2.761 2.824-5.247 5.11-7.464a22.458 22.458 0 0 1 7.393-4.775C16.87.47 19.76 0 22.919 0c2.554 0 4.972.337 7.327 1.143 2.352.74 4.638 1.881 6.924 3.496v6.724z" id="b"/>
+					        <filter x="-2.4%" y="-8.7%" width="104.7%" height="134.7%" filterUnits="objectBoundingBox" id="a">
+					            <feOffset dy="4" in="SourceAlpha" result="shadowOffsetOuter1"/>
+					            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+					            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" in="shadowBlurOuter1"/>
+					        </filter>
+					    </defs>
+					    <g transform="translate(4)" fill="none" fill-rule="evenodd">
+					        <use fill="#000" filter="url(#a)" xlink:href="#b"/>
+					        <use fill="#FFF" xlink:href="#b"/>
+					    </g>
+					</svg>
+				</div>
+				<div class="home__descriptions">Restaurant & Karaoke</div>
+			</div>
+		</div>
+		<div class="home__pages pages js-pages">
+			<a href="#" class="page" page-anim-y="bottom">
+				<span class="page__title">
+					<span class="page__title-wrap">RESTAURANT</span>
+				</span>
+				<span class="line-left">
+					<span class="line-left__inner"></span>
+				</span>
+				<span class="page__bg" style="background-image: url(./img/page-bg-left.jpg);"></span>
+				<span class="page__content">When it comes to barbequing, there are two main schools of thought for the techniques that you can use.</span>
+			</a>
+			<span class="pages__line">
+				<span class="vertical-line">
+					<span class="vertical-line__inner" line-anim-y="top"></span>
+				</span>
+			</span>
+			<a href="#" class="page" page-anim-y="bottom">
+				<span class="page__title">
+					<span class="page__title-wrap">KARAOKE CLUB</span>
+				</span>
+				<span class="line-right">
+					<span class="line-right__inner"></span>
+				</span>
+				<span class="page__bg" style="background-image: url(./img/page-bg-right.jpg);"></span>
+				<span class="page__content">When it comes to barbequing, there are two main schools of thought for the techniques that you can use.</span>
+			</a>
+		</div>
+	</div>
+	{{ footerSmall.block({ attr: 'footer-small-anim-y=bottom' }) }}
+</div>
+<!-- end home -->
+
+{% endblock %}

@@ -18,6 +18,10 @@
 		width: 50%
 		+md
 			width: 100%
+		img
+			margin: 0 auto
+			max-width: 100%
+			display: block
 	&__text
 		width: 50%
 		text-align: center
@@ -48,7 +52,11 @@
 		+sm
 			margin-bottom: 10px
 	&__btn
-		margin-top: 20px
+		margin: 0 -9px
+		.btn 
+			margin: 20px 9px 0
+			+sm
+				margin-top: 10px
 
 .col
 	width: 100%

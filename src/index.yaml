@@ -3,6 +3,8 @@ ProjectTitle: city-voice
 PageList:
 - file: home.html
   ready: 100
+- file: form-success.html
+  ready: 100
 - file: press.html
   ready: 100
 - file: menu.html
@@ -20,4 +22,8 @@ PageList:
 - file: karaoke.html
   ready: 100
 - file: contacts.html
+  ready: 100
+- file: event-inner.html
+  ready: 100
+- file: contacts-succes.html
   ready: 100

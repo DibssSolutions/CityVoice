@@ -112,11 +112,14 @@ body
 	background-position: 50% 50%
 	background-size: cover
 	background-repeat: no-repeat
-	position: relative
+	overflow: hidden
 	color: $white 
+	height: 300px
+	+vertical
+	+sm
+		height: 160px
 	&_lg
 		height: 550px
-		+vertical
 		+sm
 			height: 220px
 	&_light
@@ -133,6 +136,16 @@ body
 		right: 0
 		bottom: 0
 		background-color: rgba(#191926, 0.3) 
+	&__bg
+		position: absolute
+		top: -50px
+		left: 0
+		right: 0
+		bottom: -50px
+		text-align: center
+		background-position: 50% 50%
+		background-size: cover
+		background-repeat: no-repeat
 	&__inner
 		position: relative
 		z-index: 1
@@ -151,9 +164,6 @@ body
 			height: auto
 	&__title-lg
 		text-align: center
-		padding: 120px 0
-		+sm
-			padding: 65px 0
 	&__title-sm
 		color: $white 
 
@@ -172,3 +182,15 @@ body
 	display: none
 	+sm
 		display: block
+		
+[data-anim]
+	position: relative
+	animation: soar 3.5s ease-in-out infinite
+
+@keyframes soar
+	0%
+		transform: translate3d(0,0,0)
+	50%
+		transform: translate3d(0,-10px,0)
+	100%
+		transform: translate3d(0,0,0)

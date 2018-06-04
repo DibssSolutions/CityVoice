@@ -34,13 +34,14 @@
 		+sm
 			padding: 18px 0
 	&__list
+		margin: 0 -15px
 		font-size: 0
 		+sm
 			display: flex
 			flex-wrap: wrap
 	&__item
 		position: relative
-		padding: 0 22px
+		padding: 0 16px
 		font-size: 14px
 		line-height: 1.43
 		vertical-align: top
@@ -48,6 +49,8 @@
 		+sm
 			width: 100%
 			display: block
+		&.is-blue
+			color: #6AA2FF 
 		&:before
 			position: absolute
 			content: "" 
@@ -59,23 +62,40 @@
 			background-color: $white 
 			+sm
 				display: none
+		&:not(:nth-child(2))
+			+sm
+				margin-bottom: 7px
 		&:first-child
 			padding-left: 0
 			+sm
-				margin-bottom: 7px
 				padding-left: 22px
+				padding-right: 22px 
 			&:before
 				display: none
 		&:last-child
 			padding-right: 0
 			+sm
-				padding-right: 22px
+				padding-left: 22px
+				padding-right: 22px 
 		&:nth-child(2)
 			+sm
 				margin-top: 18px
 				padding-top: 18px
 				border-top: 1px solid rgba($white, .1) 
 				order: 3
+		.icon 
+			margin-right: 8px
+			vertical-align: middle
+			fill: currentColor
+			font-size: 17px
+			+sm
+				margin-right: 4px
+				font-size: 14px
+		a
+			transition: opacity .3s
+			color: currentColor 
+			+hover
+				opacity: .7 
 	&__copy
 		padding: 20px 0 16px
 		text-transform: lowercase
@@ -140,15 +160,21 @@
 			width: 1px
 			border-radius: 1px
 			background-color: $white 
+		&.is-blue
+			color: #6AA2FF 
 		&:first-child
 			padding-left: 0
 			&:before
 				display: none
 		&:last-child
 			padding-right: 0
+		.icon 
+			margin-right: 8px
+			vertical-align: middle
+			fill: currentColor
+			font-size: 17px
 	a
 		color: currentColor
-		border-bottom: 1px solid transparent
-		transition: border-color .3s
+		transition: opacity .3s
 		+hover
-			border-color: $white
+			opacity: .7 

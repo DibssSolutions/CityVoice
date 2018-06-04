@@ -35,6 +35,9 @@
 		flex: 1 1 23.7%
 		background-color: $white
 		border-radius: 5px
+		+hover
+			.event__img
+				transform: scale(1.2)
 		+md
 			max-width: 47.4%
 			flex: 1 1 47.4%
@@ -46,21 +49,29 @@
 		background-repeat: no-repeat
 		background-position: 50% 50%
 		padding-bottom: 88.3%
-		border-top-left-radius: 5px
-		border-top-right-radius: 5px
+		transition: transform .6s ease-in-out
 		+sm
 			padding-bottom: 84.4% 
+	&__img-wrap
+		border-top-left-radius: 5px
+		border-top-right-radius: 5px
+		overflow: hidden
 	&__info
 		padding: 0 20px
+		color: $gray
+		line-height: 1.1
 		+sm
 			padding: 0 10px 
+	&__day
+		margin-bottom: 10px
+		text-transform: uppercase
 	&__title-sm
-		padding: 22px 0 45px
+		padding: 20px 0
+		line-height: 1.5
 		+sm
-			padding: 10px 0 24px  
+			padding: 10px 0
 	&__date
-		color: $gray
-		padding-bottom: 25px 
+		padding-bottom: 28px 
 		font-size: 20px
 		font-family: $Futuras 
 		+sm
@@ -70,3 +81,58 @@
 		text-align: center
 		+sm
 			display: none 
+	&__article
+		p:not(:first-child)
+			margin-top: 30px
+			+sm
+				margin-top: 15px
+	&__hero
+		text-align: center
+	&__image
+		position: relative
+		z-index: 1
+		margin: -215px auto 0
+		width: 500px
+		height: 440px
+		background-position: 50% 50% 
+		background-size: cover
+		background-repeat: no-repeat
+		border: 14px solid $white
+		border-bottom: 0 
+		+sm
+			margin-top: -110px
+			width: 250px
+			height: 220px
+	&__title
+		margin-top: 30px
+	&__date-list
+		margin-top: 5px
+	&__date-item
+		vertical-align: middle
+		display: inline-block
+		&_day
+			text-transform: uppercase
+		&:not(:first-child)
+			margin-left: 20px
+	&__footer
+		margin-top: 30px
+		text-align: center
+.prev-block
+	margin-top: 20px
+	padding-bottom: 20px
+	text-align: right
+.btn-prev
+	font-family: $Futuras
+	font-size: 24px
+	color: #6AA2FF
+	letter-spacing: 0
+	text-align: right
+	line-height: 1.5
+	vertical-align: top
+	border-bottom: 1px solid transparent 
+	transition: border-color .3s
+	display: inline-block
+	+hover
+		border-color: currentColor 
+	+sm
+		font-size: 16px
