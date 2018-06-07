@@ -1,16 +1,24 @@
-.datepicker.dropdown-menu
+.form-calendar
+	position: absolute
+	top: 100%
+	left: 0
+	z-index: 5
+	visibility: hidden
+	opacity: 0
+	transition: visibility .3s, opacity .3s
+	.is-filled &
+		opacity: 1
+		visibility: visible
+	+sm
+		margin-top: -50%
+.datepicker.datepicker-inline
 	color: $white
 	background-color: #595959 
-.datepicker-dropdown.datepicker-orient-top:before
-	border-top-color: #595959
-.datepicker-dropdown.datepicker-orient-bottom:before
-	border-bottom-color: #595959 
-.datepicker-dropdown.datepicker-orient-top:after
-	border-top-color: #595959 
-.datepicker-dropdown.datepicker-orient-bottom:after
-	border-bottom-color: #595959 
 .datepicker table tr td, .datepicker table tr th
 	height: 24px
+.datepicker.datepicker-inline table tr td
+	padding: 5px 5px 2px 
+	line-height: 1
 .datepicker .datepicker-switch
 	vertical-align: middle
 .datepicker .next
