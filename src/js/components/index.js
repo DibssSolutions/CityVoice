@@ -9,3 +9,4 @@ import './page-animation';
 import './scroll-btn';
 import './map';
 import './paralax';
+import './init-calendar';

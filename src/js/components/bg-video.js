@@ -5,6 +5,11 @@ DOC.ready(() => {
   const off = 'is-off';
   const triggerVoise = $('.js-btn-voise');
   const btnPlay = $('.js-bg-video-btn');
+  
+  if (container && container.paused) {
+    container.play();
+  }
+
   triggerVoise.on('click', function() {
     const that = $(this);
     if (!that.hasClass(off)) {
@@ -21,7 +26,7 @@ DOC.ready(() => {
   	if (!container.paused) triggerVoise.addClass(SHOW);
   	if (container.muted) triggerVoise.addClass(off);
   };
-  setTimeout(showVoiseTigger, 500);
+  setTimeout(showVoiseTigger, 700);
 
   const detectPlay = () => { 
     if (TOUCH() && container) { 

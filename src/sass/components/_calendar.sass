@@ -1,0 +1,41 @@
+.datepicker.dropdown-menu
+	color: $white
+	background-color: #595959 
+.datepicker-dropdown.datepicker-orient-top:before
+	border-top-color: #595959
+.datepicker-dropdown.datepicker-orient-bottom:before
+	border-bottom-color: #595959 
+.datepicker-dropdown.datepicker-orient-top:after
+	border-top-color: #595959 
+.datepicker-dropdown.datepicker-orient-bottom:after
+	border-bottom-color: #595959 
+.datepicker table tr td, .datepicker table tr th
+	height: 24px
+.datepicker .datepicker-switch
+	vertical-align: middle
+.datepicker .next
+	position: relative
+	font-size: 0
+	&:before
+		position: absolute
+		content: '▶'
+		top: 50%
+		left: 50%
+		font-size: 12px
+		margin: -10px 0 0 -4px
+.datepicker .prev
+	position: relative
+	font-size: 0
+	&:before
+		position: absolute
+		content: '◀'
+		top: 50%
+		left: 50%
+		font-size: 12px
+		margin: -10px 0 0 -7px
+.datepicker .datepicker-switch:hover, .datepicker .next:hover, .datepicker .prev:hover, .datepicker table tr td span.focused, .datepicker table tr td span:hover, .datepicker tfoot tr th:hover
+	background-color: rgba(0,0,0,.38)
+.datepicker table tr td.day.focused, .datepicker table tr td.day:hover
+	background-color: $blue 
+.datepicker table tr td.active.active, .datepicker table tr td.active.disabled, .datepicker table tr td.active.disabled.active, .datepicker table tr td.active.disabled.disabled, .datepicker table tr td.active.disabled:active, .datepicker table tr td.active.disabled:hover, .datepicker table tr td.active.disabled:hover.active, .datepicker table tr td.active.disabled:hover.disabled, .datepicker table tr td.active.disabled:hover:active, .datepicker table tr td.active.disabled:hover:hover, .datepicker table tr td.active.disabled:hover[disabled], .datepicker table tr td.active.disabled[disabled], .datepicker table tr td.active:active, .datepicker table tr td.active:hover, .datepicker table tr td.active:hover.active, .datepicker table tr td.active:hover.disabled, .datepicker table tr td.active:hover:active, .datepicker table tr td.active:hover:hover, .datepicker table tr td.active:hover[disabled], .datepicker table tr td.active[disabled]
+	background: $blue 

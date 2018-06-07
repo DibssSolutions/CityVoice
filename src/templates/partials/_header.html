@@ -66,12 +66,6 @@
 						<div class="header-tabs__wrap" data-tabs-wrapper>
 							<div class="header-tabs__container" data-tabs-container="tab-1">
 								<form action="/" class="form{% if props.formSuccess %} is-success{% endif %}">
-									<div class="form-success">
-										<div class="form-success__wrap">
-											<div class="form-success__icon">{{ mixins.icon('check') }}</div>
-											<div class="form-success__text">Bryce Canyon A Stunning Us Travel Destination</div>
-										</div>
-									</div>
 									<div class="form-control js-form-control" data-stagger-y="top">
 										<input type="text" class="input{% if props.class !== 'header_white' %} input_white{% endif %}" placeholder="Name">
 									</div>
@@ -81,7 +75,7 @@
 									<div class="form-row" data-stagger-y="top">
 										<div class="form-col">
 											<div class="form-control js-form-control">
-												<input type="text" class="input{% if props.class !== 'header_white' %} input_white{% endif %}" placeholder="Дата визита">
+												<input type="text" class="input{% if props.class !== 'header_white' %} input_white{% endif %} js-calendar" placeholder="Дата визита">
 											</div>
 										</div>
 										<div class="form-col">
@@ -97,6 +91,12 @@
 									<div class="form-footer" data-stagger-y="top">
 										<button class="btn btn_lg" type="submit">Send</button>
 									</div>
+									<div class="form-success">
+										<div class="form-success__wrap">
+											<div class="form-success__icon">{{ mixins.icon('check') }}</div>
+											<div class="form-success__text">Bryce Canyon A Stunning Us Travel Destination</div>
+										</div>
+									</div>
 								</form>
 							</div>
 							<div class="header-tabs__container" data-tabs-container="tab-2">
@@ -110,7 +110,7 @@
 									<div class="form-row" data-stagger-y="top">
 										<div class="form-col">
 											<div class="form-control js-form-control">
-												<input type="text" class="input{% if props.class !== 'header_white' %} input_white{% endif %}" placeholder="Дата визита">
+												<input type="text" class="input{% if props.class !== 'header_white' %} input_white{% endif %} js-calendar" placeholder="Дата визита">
 											</div>
 										</div>
 										<div class="form-col">
@@ -125,6 +125,12 @@
 									</div>
 									<div class="form-footer" data-stagger-y="top">
 										<button class="btn btn_lg" type="submit">Send</button>
+									</div>
+									<div class="form-success">
+										<div class="form-success__wrap">
+											<div class="form-success__icon">{{ mixins.icon('check') }}</div>
+											<div class="form-success__text">Bryce Canyon A Stunning Us Travel Destination</div>
+										</div>
 									</div>
 								</form>
 							</div>

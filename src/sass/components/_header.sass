@@ -1,6 +1,9 @@
 .header
-	position: relative
-	z-index: 100
+	position: fixed
+	top: 0
+	left: 0
+	width: 100% 
+	z-index: 99
 	color: $gray
 	width: 100%
 	font-weight: 500 
@@ -15,6 +18,8 @@
 		+md
 			transform: translateY(0)
 			opacity: 1
+	+sm
+		position: relative
 	&__inner
 		margin: 0 auto
 		padding: 0 30px
@@ -64,11 +69,12 @@
 		+sm
 			height: 100vh
 			margin-top: -100vh
+		.header_white &
+			box-shadow: 0 1px 1px rgba($black, .1) 
 	&__out
 		background-color: $black 
 		.header_white &
 			background-color: $white 
-			box-shadow: 0 1px 1px rgba($black, .1) 
 		+sm
 			height: 100vh
 			overflow: auto
@@ -88,7 +94,7 @@
 			background-color: $white 
 	&__btn
 		position: relative
-		margin: 5px auto -35px
+		margin: 19px auto -35px
 		width: 170px
 		text-align: center
 		+md
@@ -283,8 +289,7 @@
 		height: 20px
 	.header_white &
 		color: #191926 
-	&:before,
-	&:after
+	&:before
 		position: absolute
 		content: ""
 		z-index: -1
@@ -300,9 +305,6 @@
 		.header_white &
 			box-shadow: 0 1px 1px rgba($black, .1) 
 			background-color: $white
-	&:after
-		z-index: 5
-		background-color: transparent
 	&__text
 		position: absolute
 		top: 0
@@ -311,10 +313,10 @@
 		z-index: 6
 .btn-close-form
 	position: absolute
-	bottom: 0
+	bottom: -4px
 	left: 0
 	padding-top: 21px
-	z-index: 6
+	z-index: 4
 	color: $white 
 	width: 170px
 	height: 58px
@@ -325,6 +327,13 @@
 	user-select: none
 	text-align: center
 	background-color: transparent 
+	&:before
+		position: absolute
+		content: ""
+		top: -10px
+		left: -10px
+		right: -10px
+		bottom: -10px 
 	.header_white &
 		color: #191926 
 	.header__out &
@@ -364,7 +373,7 @@
 	font-size: 0
 	border-radius: 50% 
 	background-color: rgba($white, .1)
-	opacity: 0
+	// opacity: 0
 	+md
 		display: none
 	&.is-show
