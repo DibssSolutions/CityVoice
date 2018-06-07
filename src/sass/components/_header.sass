@@ -149,14 +149,14 @@
 			.header_white &
 				color: #191926 
 		&.is-active
+			color: $white 
 			+md
 				padding: 0 28px
-				color: $white 
 				border-bottom: 1px solid $blue 
 				vertical-align: top
 				display: inline-block
-				.header_white &
-					color: #191926 
+			.header_white &
+				color: #191926 
 		&:not(:first-child)
 			margin-left: 32px
 			+lg
@@ -178,6 +178,13 @@
 	left: 50%
 	margin-left: -36px
 	width: 73px
+	&:before
+		position: absolute
+		content: "" 
+		top: -20px
+		right: -20px
+		left: -20px
+		bottom: -20px
 	+sm
 		top: 10px 
 		width: 47px
@@ -276,7 +283,8 @@
 		height: 20px
 	.header_white &
 		color: #191926 
-	&:before
+	&:before,
+	&:after
 		position: absolute
 		content: ""
 		z-index: -1
@@ -292,6 +300,9 @@
 		.header_white &
 			box-shadow: 0 1px 1px rgba($black, .1) 
 			background-color: $white
+	&:after
+		z-index: 5
+		background-color: transparent
 	&__text
 		position: absolute
 		top: 0
@@ -302,7 +313,7 @@
 	bottom: 0
 	left: 0
 	padding-top: 21px
-	z-index: 2
+	z-index: 6
 	color: $white 
 	width: 170px
 	height: 58px

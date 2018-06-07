@@ -27,11 +27,13 @@ headerTl
   	ease: Expo.easeOut
   }, 0, 'start');
 
-btnOpenForm.on('click', () => { 
+btnOpenForm.on('click', (e) => { 
   window.headerTl.play();
   BODY.addClass(HIDDEN);
+  e.preventDefault();
 });
-btnCloseForm.on('click', () => { 
+btnCloseForm.on('click', (e) => { 
+  e.preventDefault();
   window.headerTl.reverse();
   BODY.removeClass(HIDDEN);
 });

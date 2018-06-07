@@ -14,14 +14,14 @@
 			<div class="header__out-navigation">
 				<!-- begin navigation -->
 				<ul class="navigation navigation_left">
-					{% for text in [ "Меню", "События", "Галерея", "Ресторан" ] %}
+					{% for text in [ "Главная", "События", "Галерея", "Ресторан" ] %}
 						<li class="navigation__item{% if loop.first %} is-active{% endif %}"><a href="#" class="navigation__link">{{ text }}</a></li>
 					{% endfor %}
 				</ul>
 				<!-- end navigation -->
 				<!-- begin navigation -->
 				<ul class="navigation navigation_right">
-					{% for text in [ "Караоке", "Контакты", "Банкеты", "Пресса о нас" ] %}
+					{% for text in [ "Караоке", "Меню", "Пресса о нас", "Контакты" ] %}
 						<li class="navigation__item"><a href="#" class="navigation__link">{{ text }}</a></li>
 					{% endfor %}
 				</ul>
@@ -31,7 +31,7 @@
 				</div>
 			</div>
 			<!-- begin logo -->
-			<a href="/" class="header__logo logo">
+			<a href="/" class="header__logo logo js-btn-open-form">
 				<svg width="73" height="39" viewBox="0 0 73 39" xmlns="http://www.w3.org/2000/svg">
 				    <title>
 				        Logo
