@@ -16,19 +16,15 @@
 		+sm
 			margin-top: 20px
 	&__row
-		margin-bottom: 30px
 		display: flex
 		flex-wrap: wrap
 		position: relative
 		z-index: 10
 		justify-content: space-between
-		+md
-			margin-bottom: 0
-	&__row
-		&:last-child
-			margin-bottom: 40px
-			+sm
-				display: none
+		&:not(:last-child)
+			margin-bottom: 30px
+			+md
+				margin-bottom: 0
 	&__item
 		max-width: 23.7%
 		display: flex
@@ -80,7 +76,10 @@
 			font-size: 13px
 			padding-bottom: 10px
 	&__btn
+		margin-top: 40px
 		text-align: center
+		+md
+			margin-top: 0
 		+sm
 			display: none 
 	&__article
