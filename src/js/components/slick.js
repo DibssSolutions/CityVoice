@@ -24,6 +24,7 @@ sliderWrap.each(function() {
         navContainer.slick({
           slidesToShow: 7,
           slidesToScroll: 1,
+          arrows: false,
           asNavFor: singleContainer.get(0),
           dots: false,
           focusOnSelect: true,
