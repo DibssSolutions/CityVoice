@@ -17,6 +17,8 @@ PageList:
   ready: 100
 - file: restaurant.html
   ready: 100
+- file: restaurant-form-success.html
+  ready: 100
 - file: gallery.html
   ready: 100
 - file: karaoke.html

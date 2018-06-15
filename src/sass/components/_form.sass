@@ -23,6 +23,9 @@
 	&_white
 		color: $black 
 		background-color: $white 
+	.header_white &
+		color: $black 
+		background-color: $white 
 	.form.is-success &
 		color: #9393A5 
 		display: block
@@ -35,6 +38,7 @@
 		top: -103px
 		display: none
 		background-color: #191926 
+		.header_white &,
 		.form-success_white &
 			background-color: $white 
 		.header &
@@ -56,6 +60,7 @@
 			font-size: 43px 
 			+sm
 				font-size: 25px 
+			.header_white &,
 			.form-success_white &
 				fill: #6AA2FF
 	&__text

@@ -22,5 +22,7 @@ control
   })
   .on('blur', function() {
     const that = $(this);
-    checkInputValue(that);
+    setTimeout(() => {
+      checkInputValue(that);
+    }, 100);
   });
