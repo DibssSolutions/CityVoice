@@ -23,14 +23,14 @@ window.headerTl = new TimelineMax({ paused: true });
 btnOpenForm.on('click', (e) => { 
   window.headerTl
     .addLabel('start')
-    .addLabel('stagger', '+=0.1')
+    .addLabel('stagger', '+=0')
     .staggerTo(headerStaggers, 0.7, {
       y: 0,
       ease: Expo.easeOut
     }, -0.04, 'stagger')
-    .to(headerBottom, 0.5, {
+    .to(headerBottom, 1.2, {
       y: headerBottomHeight,
-      ease: Power0.easeNone
+      ease: Expo.easeOut
     }, 0, 'start')
     .to('.js-btn-open-form .btn-open-form__text', 0.3, {
       opacity: 0,

@@ -69,5 +69,8 @@
     "vide": "^0.5.1",
     "webpack": "^2.2.1",
     "webpack-bundle-analyzer": "^1.5.3"
+  },
+  "dependencies": {
+    "inputmask": "^4.0.0"
   }
 }

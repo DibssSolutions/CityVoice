@@ -1,3 +1,7 @@
+import Inputmask from 'inputmask';
+
+Inputmask({placeholder: ''}).mask(document.querySelectorAll('input'));
+
 const control = $('input, textarea');
 const filled = 'is-filled';
 const checkInputValue = (that) => {
@@ -26,3 +30,14 @@ control
       checkInputValue(that);
     }, 100);
   });
+
+const inputTime = $('input[name="time"]');
+inputTime.on('keyup', function() {
+  var value = $(this).val();
+  var re = /[0-9][0-9]:[0-9][0-9]/; // 0-9 + - nbsp () 
+  if (re.test(value)) {
+    console.log('ddd');
+    value = value.replace(re, '');
+    $(this).val(value);
+  }
+});

@@ -28,7 +28,7 @@
 			padding: 0 15px
 	&__top
 		position: relative
-		z-index: 4
+		z-index: 5
 		padding: 17px 50px 19px
 		text-align: center
 		font-size: 0
@@ -66,15 +66,17 @@
 		position: relative
 		height: 593px
 		margin-top: -593px
+		box-shadow: 0 1px 1px rgba($lightGray, .06)
+		background-color: $black 
 		+sm
 			height: 100vh
 			margin-top: -100vh
 		.header_white &
+			background-color: $white
 			box-shadow: 0 1px 1px rgba($black, .1) 
 	&__out
-		background-color: $black 
-		.header_white &
-			background-color: $white 
+		position: relative
+		z-index: 4
 		+sm
 			height: 100vh
 			overflow: auto
@@ -83,6 +85,7 @@
 		margin: 0 auto
 		padding: 26px 0 78px
 		max-width: 718px
+		z-index: 3
 		border-top: 1px solid rgba($white, 0.1) 
 		+sm
 			padding-top: 40px
@@ -90,20 +93,17 @@
 			border: 0 
 		.header_white &
 			position: relative
-			z-index: 3
-			background-color: $white 
 	&__btn
 		position: relative
 		margin: 19px auto -35px
 		width: 170px
 		text-align: center
+		z-index: 2
 		+md
 			margin-bottom: -16px
 		+sm
 			margin-top: 0
 			margin-bottom: 0
-		.header_white &
-			z-index: 2
 	&__reserve
 		position: relative
 		margin-top: 29px
@@ -250,7 +250,9 @@
 		.header_white &
 			border-bottom: 1px solid #9393a5
 	&__item
+		position: relative
 		padding: 0 14px 14px
+		cursor: pointer
 		vertical-align: top
 		border-bottom: 1px solid transparent 
 		transition: color .3s, border-color .3s
@@ -263,9 +265,24 @@
 			font-size: 13px
 		+hover
 			color: $blue 
-		&.is-active
-			color: $blue 
-			border-color: $blue 
+		span
+			&:before
+				position: absolute
+				content: "" 
+				left: 0
+				bottom: 0
+				height: 1px
+				right: 0
+				transition: background-color .3s
+		input
+			position: absolute
+			top: 0
+			left: 0
+			opacity: 0
+			&:checked + span
+				color: $blue  
+				&:before
+					background-color: $blue
 	&__container
 		padding-top: 18px
 
@@ -300,10 +317,23 @@
 		height: 250px
 		border-radius: 50% 
 		background-color: $black 
+		box-shadow: 0 1px 1px rgba($lightGray, .06) 
 		+sm
 			width: 200px
 		.header_white &
 			box-shadow: 0 1px 1px rgba($black, .1) 
+			background-color: $white
+	&:after
+		position: absolute
+		content: ""
+		z-index: -1
+		left: 50%
+		transform: translateX(-50%)
+		bottom: 35px
+		width: 250px
+		height: 250px
+		background-color: $black 
+		.header_white &
 			background-color: $white
 	&__text
 		position: absolute
@@ -316,7 +346,7 @@
 	bottom: -4px
 	left: 0
 	padding-top: 21px
-	z-index: 4
+	z-index: 100
 	color: $white 
 	width: 170px
 	height: 58px
