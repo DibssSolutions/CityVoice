@@ -1,6 +1,9 @@
+import { BODY } from '../constants'; 
 import Inputmask from 'inputmask';
 
-Inputmask({placeholder: ''}).mask(document.querySelectorAll('input'));
+BODY.on('focus', 'input', function() {
+  Inputmask({placeholder: ''}).mask(this);
+});
 
 const control = $('input, textarea');
 const filled = 'is-filled';
@@ -30,14 +33,3 @@ control
       checkInputValue(that);
     }, 100);
   });
-
-const inputTime = $('input[name="time"]');
-inputTime.on('keyup', function() {
-  var value = $(this).val();
-  var re = /[0-9][0-9]:[0-9][0-9]/; // 0-9 + - nbsp () 
-  if (re.test(value)) {
-    console.log('ddd');
-    value = value.replace(re, '');
-    $(this).val(value);
-  }
-});
