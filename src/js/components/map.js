@@ -17,8 +17,8 @@ export default class Map {
   _createMap() {
     this._map = new google.maps.Map(this._mapHTML, {
       center: this._center,
-      zoom: 18,
-      disableDefaultUI: true,
+      zoom: 15,
+      // disableDefaultUI: true,
       // scrollwheel: false,
       // zoomControl: true,
       // draggable: false,
@@ -171,7 +171,7 @@ export default class Map {
       map: this._map,
       icon: {
         url: 'img/marker.png',
-        scaledSize: new google.maps.Size(50, 50)
+        scaledSize: new google.maps.Size(50, 57)
       }
     });
   }

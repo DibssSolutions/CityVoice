@@ -20,7 +20,6 @@
 		flex-wrap: wrap
 		position: relative
 		z-index: 10
-		justify-content: space-between
 		&:not(:last-child)
 			margin-bottom: 30px
 			+md
@@ -36,6 +35,13 @@
 		+hover
 			.event__img
 				transform: scale(1.2)
+		&:not(:first-child)
+			margin-left: 1.7%
+			+md
+				margin-left: 5%
+		&:nth-child(odd)
+			+md
+				margin-left: 0
 		+md
 			max-width: 47.4%
 			flex: 1 1 47.4%

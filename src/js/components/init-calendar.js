@@ -19,7 +19,9 @@ if ($('body #datepicker').length) {
     calendarWeeks: false,
     language: 'ru',
     format: 'dd/mm/yyyy'
-  });
+  })
+    .change(dateChanged)
+    .on('changeDate', dateChanged);
   BODY.on('changeDate', '#datepicker', function() {
     $(this).parent('.js-form-control').removeClass('is-open');
     $('body #datepicker-input').val(
@@ -27,3 +29,16 @@ if ($('body #datepicker').length) {
     );
   });
 };
+
+
+function dateChanged(ev) {
+  setTimeout(() => {
+    if ($('body #datepicker-input').val() !== '') {
+      $('body #datepicker-input').val(
+        $('body #datepicker').datepicker('getFormattedDate')
+      );
+      $('body #datepicker-input').trigger('blur');
+      $('body #datepicker').parents('.js-form-control').removeClass(open);
+    }
+  }, 100);
+}

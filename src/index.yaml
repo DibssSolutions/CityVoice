@@ -29,3 +29,5 @@ PageList:
   ready: 100
 - file: contacts-succes.html
   ready: 100
+- file: pc.html
+  ready: 100
