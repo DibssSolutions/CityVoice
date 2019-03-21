@@ -86,11 +86,10 @@
 .slider
 	&__row
 		position: relative
-		+md
-			display: flex
-			flex-direction: column
-			&.js-slider-nav
-				display: none
+		&_border
+			margin-top: 30px
+			+md
+				margin-top: 10px
 	&__prev
 		position: absolute
 		top: 48.5%
@@ -108,9 +107,9 @@
 			width: 10px
 			margin-left: 4px
 			margin-bottom: -2px
-		+md
-			width: 20px
-			height: 20px	
+		// +md
+		// 	width: 20px
+		// 	height: 20px	
 	&__next
 		position: absolute
 		top: 48.5%
@@ -128,9 +127,9 @@
 			width: 10px
 			margin-left: 4px
 			margin-bottom: -4px
-		+md
-			width: 20px
-			height: 20px
+		// +md
+		// 	width: 20px
+		// 	height: 20px
 
 .fancybox-slide
 	padding: 0
@@ -184,8 +183,6 @@
 .fancybox-caption::after
 	border-bottom: none
 
-.slider__row_border
-	margin-top: 30px
 
 .slick-list
 	.slider__row_border &
@@ -212,7 +209,7 @@
 		margin-bottom: 30px
 	+sm
 		margin-bottom: 15px
-		height: 164px
+		height: 264px
 		&:last-child
 			margin-bottom: 0
 

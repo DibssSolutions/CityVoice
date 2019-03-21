@@ -7,47 +7,47 @@ sliderWrap.each(function() {
   const navContainer = that.find('.js-slider-nav');
   
   //debouns
-  const initSlider = () => {
-    if ($(window).width() >= 1023) {
-      if (!singleContainer.hasClass('slick-initialized')) {
-        singleContainer.slick({
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: true,
-          fade: true,
-          asNavFor: navContainer.get(0),
-          autoplay: false,
-          adaptiveHeight: true,
-          prevArrow: '<button type="button" class="slider__prev"><img src="img/arrow.svg"></button>',
-          nextArrow: '<button type="button" class="slider__next"><img src="img/arrow.svg"></button>',
-        });
-        navContainer.slick({
-          slidesToShow: 7,
-          slidesToScroll: 1,
-          arrows: false,
-          asNavFor: singleContainer.get(0),
-          dots: false,
-          focusOnSelect: true,
-        });
-        
-      } 
-    } else {
-      if(singleContainer.hasClass('slick-initialized')) {
-        
-        singleContainer.slick('unslick');
+  // const initSlider = () => {
+  singleContainer.slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    fade: true,
+    asNavFor: navContainer.get(0),
+    autoplay: false,
+    adaptiveHeight: true,
+    prevArrow: '<button type="button" class="slider__prev"><img src="img/arrow.svg"></button>',
+    nextArrow: '<button type="button" class="slider__next"><img src="img/arrow.svg"></button>',
+  });
+  navContainer.slick({
+    slidesToShow: 7,
+    slidesToScroll: 1,
+    arrows: false,
+    asNavFor: singleContainer.get(0),
+    dots: false,
+    focusOnSelect: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 3,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
       }
-    }
-  };
- 
-  initSlider();
-
-  let timeOut;
-
-  $(window).on('resize', () => {
-    clearTimeout(timeOut);
-    timeOut = setTimeout(() => {
-      initSlider();
-    }, 100);
+    ]
   });
 });
-
